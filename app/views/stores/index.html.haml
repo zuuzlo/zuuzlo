@@ -1,0 +1,33 @@
+.container
+  .page-header
+    %h3 STORES
+  .row
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title Today's Featured Stores
+      .panel-body
+        .row
+          -@stores_featured.each_with_index do | featured_store, i |
+            -if i %  6 == 0 
+              .row
+            .l2.s2
+              = link_to image_tag(featured_store.store_img, size: "125x40", alt: featured_store.name), { action: 'show', id: featured_store }, class: "thumbnail"
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title Stores by Name
+      .panel-body
+        - g = @store_array.group_by{ |c| c.upcase[0..0] }
+        .panel-group#accordion
+          - ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'].each do |letter|
+            .panel.panel-default
+              .panel-heading
+                %h4.panel-title
+                  %a.accordion-toggle{"data-toggle" => 'collapse', 'data-parent' => '#accordion', 'href' => "#collapse_#{letter}" }
+                    = "#{letter}"
+              %div#collapse.panel-collapse.collapse{:id => letter }
+                .panel-body
+                  - store_g = g[letter] || []
+                  - store_g.each do | store |
+                    .l3.s3
+                      =link_to "#{store}", { action: 'show', id: Store.find_by_name(store) }
+                      %span.badge=number_of_coupons(Store.find_by_name(store))

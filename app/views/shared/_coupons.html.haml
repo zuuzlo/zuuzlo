@@ -1,0 +1,31 @@
+-coupons.each_with_index do |coupon, i|
+  -if i % 3 == 0
+    .row
+  .l4.s4{ 'data-type' => "#{coupon_type(coupon)}" }
+    .thumbnail
+      %img{'src' => "#{coupon.store_image}" }
+      .caption.coupon
+        %h4 #{coupon.title.split("- ").last}
+        .well.well-sm
+          = store_link(controller_name, coupon)
+          %p
+            %b #{coupon.description}
+          -if coupon.code
+            %h5
+              Coupon Code:
+              %b
+                #{coupon.code}
+          %span.label.label-warning
+            #{coupon.store_commission} 
+            \% cash back
+        = button_link(coupon)
+        %h5
+          = time_left_display(coupon)
+        -if coupon.categories.size > 0
+          %h5
+            =render coupon.categories
+        -if coupon.restriction
+          %h6
+            Restrictions:
+            #{coupon.restriction}
+  

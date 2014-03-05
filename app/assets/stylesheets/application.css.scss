@@ -1,0 +1,92 @@
+// Grid shortcuts
+// use with https://github.com/anjlab/bootstrap-rails
+//
+// For for tiny devices (smartphones)
+//  - columns: .c[1-12]
+// For small devices (phones to tablets)
+//  - columns: .s[1-12]
+//  - offsets: .so[0-11]
+//  - pulls:   .sl[0-11]
+//  - pushes:  .sr[0-11]
+// For medium and large devices (desktop and up)
+//  - columns: .l[1-12]
+//  - offsets: .lo[0-11]
+//  - pulls:   .ll[0-11]
+//  - pushes:  .lr[0-11]
+//
+// Example in slim
+//  .row
+//    .s6.so0.l5.lo1
+//      div style='background:red'
+//        ' red: full row on tiny devices, half screen on tablets and 5/12 with offset 1 on large screens
+//    .s6.l5
+//      div style='background:yellow'
+//        ' yellow: full row on tiny devices, half screen on tablets and 5/12 on large screens
+ 
+ 
+@import 'bootstrap';
+ 
+.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
+.s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12,
+.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10, .l11, .l12 {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+}
+ 
+@mixin grid-shortcuts($prefix: 'l', $with-offsets: false) {
+  .#{$prefix}1, .#{$prefix}2,  .#{$prefix}3,  .#{$prefix}4,
+  .#{$prefix}5, .#{$prefix}6,  .#{$prefix}7,  .#{$prefix}8,
+  .#{$prefix}9, .#{$prefix}10, .#{$prefix}11, .#{$prefix}12 {
+    float: left;
+  }
+ 
+  @for $i from 1 through $grid-columns {
+    .#{$prefix}#{$i}  { width: percentage($i/$grid-columns) }
+  }
+ 
+  @if $with-offsets {
+    @for $i from 0 through $grid-columns - 1 {
+      $size: percentage($i/$grid-columns);
+      .#{$prefix}o#{$i} { margin-left: $size; }
+      .#{$prefix}r#{$i} { left:        $size; }
+      .#{$prefix}l#{$i} { right:       $size; }
+    }
+  }
+}
+
+//= require rails_bootstrap_forms
+ 
+// Generate grid for tiny devises
+@include grid-shortcuts($prefix: 'c');
+ 
+// Small device columns (phones to tablets)
+@media (min-width: $screen-tablet) {
+  @include grid-shortcuts($prefix: 's', $with-offsets: true);
+}
+ 
+// Medium and large device columns (desktop and up)
+@media (min-width: $screen-desktop) {
+  @include grid-shortcuts($prefix: 'l', $with-offsets: true);
+}
+
+/* general */
+  
+/* coupon */
+.coupon {
+  text-align:center;
+  
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+  padding: 6px 12px !important;
+  color: white !important;
+}
+
+/* Stores */
+img.stores {
+  padding-bottom:5px;
+}

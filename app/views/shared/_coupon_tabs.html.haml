@@ -1,0 +1,16 @@
+%ul.nav.nav-pills
+  %li.active
+    = link_to '#all', data: { toggle: "pill"} do
+      %span.badge.pull-right
+        #{@coupons.count}
+      ALL
+  %li
+    = link_to '#coupon_codes', data: { toggle: "pill"} do
+      %span.badge.pull-right
+        #{@coupon_codes.count}
+      COUPON CODES
+  %li
+    = link_to '#offers', data: { toggle: "pill" } do
+      %span.badge.pull-right
+        #{@coupon_offers.count}
+      OFFERS

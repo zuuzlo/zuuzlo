@@ -1,0 +1,26 @@
+!!! 5
+%html(lang="en-US")
+  %head
+    %title
+      = yield :title
+    %meta(charset="UTF-8")
+    %meta( http-equiv="X-UA-Compatible" content="IE=edge" )
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    = csrf_meta_tag
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    /HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    /WARNING: Respond.js doesn't work if you view the page via file:
+    /[if lt IE 9]
+      = javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"
+      = javascript_include_tag "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"
+    
+    = yield :head
+  %body
+    %header
+      = render 'shared/header'
+    %section.content.clearfix
+      = render 'shared/messages'
+      = yield
+    %footer
+      =render 'shared/footer'

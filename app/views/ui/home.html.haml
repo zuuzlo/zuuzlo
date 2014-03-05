@@ -1,0 +1,59 @@
+-provide(:title, 'Welcome to ZUUZLO Coupons | Home')
+.container
+  .page-header
+    %h3 HOME
+  .row
+    .l9.s9
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title How to Use
+        .panel-body
+          .l6.s6
+            %h4 Finding Coupons:
+            %ul
+              %li Here is how to use the website.
+          .l6.s6
+            %h4 How to Use:
+            %ul
+              %li Here is how to use the website.
+    .l3.s3
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title Popular Stores
+        .panel-body
+          #carousel-store-generic.carousel.slide
+            %ol.carousel-indicators
+              %li.active{ 'data-target'=>"#carousel-store-generic",'data-slide-to'=>"0" }
+              %li{ 'data-target'=>"#carousel-store-generic",'data-slide-to'=>"0" }
+              %li{ 'data-target'=>"#carousel-store-generic",'data-slide-to'=>"0" }
+            .carousel-inner
+              .item.active
+                %img{ 'data-src' => "holder.js/250x250" }
+                .carousel-caption Store 1
+              .item
+                %img{ 'data-src' => "holder.js/250x250" }
+                .carousel-caption Store 2
+              .item
+                %img{'data-src' => "holder.js/250x250" }
+                .carousel-caption Store 3
+            %a.left.carousel-control{ href: "#carousel-store-generic", 'data-slide'=>"prev" }
+              %span.icon-prev
+            %a.right.carousel-control{ href: "#carousel-store-generic", 'data-slide'=>"next" }
+              %span.icon-next
+  .row
+    .l12.s12
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title Latest Coupon Codes
+        .panel-body
+          -6.times do
+            .l2.s2
+              .thumbnail
+                %img{'data-src' => "holder.js/120x60" }
+                .caption.coupon
+                  %h4 Coupon Name
+                  %h5 Store
+                  %h5 Description:
+                  %p Get jeans for $10 off.
+                  %a.btn.btn-primary(href='#') Get Deal 
+                  %span.label.label-success Expires in 3 days

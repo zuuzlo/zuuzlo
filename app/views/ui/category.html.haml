@@ -1,0 +1,22 @@
+-provide(:title, 'Welcome to ZUUZLO Coupons | Category')
+.container
+  .page-header
+    %h3 Category
+  .row
+    .l12.s12
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title Category
+        .panel-body
+          .row
+          -6.times do
+            .l4.s4
+              .thumbnail
+                %img{'data-src' => "holder.js/120x40" }
+                .caption.coupon
+                  %h4 Coupon Name
+                  %h5 Store
+                  %h5 Description:
+                  %p Get jeans for $10 off.
+                  %a.btn.btn-primary(href='#') Get Deal 
+                  %span.label.label-success Expires in 3 days

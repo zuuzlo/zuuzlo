@@ -1,0 +1,8 @@
+.panel-body
+  .tab-content
+    .l12.s12.tab-pane.active#all
+      = render partial: 'shared/coupons', locals: { coupons: @coupons }
+    .l12.s12.tab-pane#coupon_codes
+      = render partial: 'shared/coupons', locals: { coupons: @coupon_codes }
+    .l12.s12.tab-pane#offers
+      = render partial: 'shared/coupons', locals: { coupons: @coupon_offers }

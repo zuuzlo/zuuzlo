@@ -1,0 +1,14 @@
+-provide(:title, "Welcome to ZUUZLO Coupons | #{@store.name}")
+.container
+  .page-header
+    %h1 #{@store.name}
+  .row
+    .l12.s12
+      .panel.panel-default
+        .panel-heading
+          .panel-title 
+            Latest coupons for
+            %i
+              #{@store.name}
+          = render 'shared/coupon_tabs'
+        = render 'shared/coupon_tab_content'  

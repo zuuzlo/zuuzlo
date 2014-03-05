@@ -1,0 +1,31 @@
+.container
+  .page-header
+    %h3 STORES
+  .row
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title Today's Featured Stores
+      .panel-body
+        -6.times do
+          .l2.s2
+            -2.times do
+              %img.stores{ 'data-src' => 'holder.js/120x60' }
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title Stores by Name
+      .panel-body
+        - store = ['Target', 'Sears', 'JCP', 'Kohls', 'K 1', 'K 2', 'K 3', 'K 4', 'Macys', 'Kmart']
+        - g = store.group_by{ |c| c.upcase[0..0] }
+        .panel-group#accordion
+          - ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'].each do |letter|
+            .panel.panel-default
+              .panel-heading
+                %h4.panel-title
+                  %a.accordion-toggle{"data-toggle" => 'collapse', 'data-parent' => '#accordion', 'href' => "#collapse_#{letter}" }
+                    = "#{letter}"
+              %div#collapse.panel-collapse.collapse{:id => letter }
+                .panel-body
+                  - stores = g[letter] || []
+                  - stores.each do |store|
+                    .l3.s3
+                      = link_to "#{store}", "#"

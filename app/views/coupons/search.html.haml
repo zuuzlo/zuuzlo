@@ -1,0 +1,14 @@
+-provide(:title, "Welcome to ZUUZLO Coupons | Search Results")
+.container
+  .page-header
+    %h1
+      Search Results for 
+      %i
+        #{@term}
+  .row
+    .l12.s12
+      .panel.panel-default
+        .panel-heading
+          .panel-title Coupon Search Results
+          = render 'shared/coupon_tabs'
+        = render 'shared/coupon_tab_content'
