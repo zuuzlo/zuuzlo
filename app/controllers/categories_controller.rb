@@ -1,10 +1,10 @@
 class CategoriesController < ApplicationController
-  include CouponCodesOffers
+  include LoadCoupons
+  include LoadSeo
+
   def show
     @category = Category.friendly.find(params[:id])
-    @coupons = @category.coupons.where(["end_date >= :time ", { :time => DateTime.current }]).order( 'end_date ASC' )
-    
-    @coupon_codes = coupon_codes(@coupons)
-    @coupon_offers = coupon_offers(@coupons)
+    load_all_coupons(@category)
+    render 'coupons/display_coupons', locals: { title: @category, meta_keywords: seo_keywords(@coupons, @category), meta_description: seo_description(@coupons, @category)}
   end
 end

@@ -2,17 +2,17 @@ module CouponCodesOffers
   extend ActiveSupport::Concern
 
   def coupon_codes(coupons)
-    codes = []
+    codes = 0
     coupons.each do | coupon |
-      codes << coupon if coupon.code
+      codes = codes + 1 if coupon.code
     end
     codes
   end
 
   def coupon_offers(coupons)
-    offers = []
+    offers = 0
     coupons.each do | coupon |
-      offers << coupon unless coupon.code
+      offers = offers + 1 unless coupon.code
     end
     offers
   end

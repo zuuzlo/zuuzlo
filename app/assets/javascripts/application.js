@@ -11,10 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require holder
 //= require_tree .
 // Include all twitter's javascripts
-//= require bootstrap
-
-//= require holder
+//require bootstrap

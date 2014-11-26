@@ -45,12 +45,71 @@ describe StoresController do
       expect(assigns(:coupons)).to eq([coupon2,coupon1])
     end
 
-    it "sets @coupon_codes" do
-      expect(assigns(:coupon_codes)).to eq([coupon1])
+    it "sets number of codes_count" do
+      expect(assigns(:codes_count)).to eq(1)
     end
 
-    it "sets @coupon_offers" do
-      expect(assigns(:coupon_offers)).to eq([coupon2])
+    it "sets number of offers_count" do
+      expect(assigns(:offers_count)).to eq(1)
+    end
+  end
+
+  describe "POST save_store" do
+    let!(:store1) { Fabricate(:store) }
+    context "with authenticated user" do
+      before do
+        set_current_user
+        request.env["HTTP_REFERER"] = store_path(store1)
+        post :save_store, { id: store1.id, store_id: store1.id}
+      end
+
+      it "sets @store" do
+        expect(assigns(:store)).to eq(store1)
+      end
+
+      it "adds store to users stores (favorite)" do
+        expect(current_user.stores.count).to eq(1)
+      end
+
+      it "set flash success" do
+        expect(flash[:success]).to be_present
+      end
+    end
+
+    context "without authenticated user" do
+      it_behaves_like "require_sign_in" do
+        let(:action) { post :save_store, { id: store1.id, store_id: store1.id} }
+      end
+    end
+  end
+
+  describe "POST remove_store" do
+    let!(:store1) { Fabricate(:store) }
+    context "with authenticated user" do
+      before do
+        set_current_user
+        current_user.stores << store1
+        request.env["HTTP_REFERER"] = store_path(store1)
+        post :remove_store, { id: store1.id, store_id: store1.id}
+      end
+
+      it "sets @store" do
+        expect(assigns(:store)).to eq(store1)
+      end
+
+      it "adds store to users stores (favorite)" do
+        expect(current_user.stores.count).to eq(0)
+      end
+
+      it "set flash success" do
+        expect(flash[:success]).to be_present
+      end
+    end
+
+    context "without authenticated user" do
+      it_behaves_like "require_sign_in" do
+        let(:action) { post :remove_store, { id: store1.id, store_id: store1.id} }
+      end
     end
   end
 end

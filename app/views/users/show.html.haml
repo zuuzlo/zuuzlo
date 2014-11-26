@@ -1,0 +1,22 @@
+.container
+  .page-header
+    %h1 HOME PAGE for #{@user.full_name} 
+  .row
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title Favorite Stores
+      .panel-body
+        .row
+          -@stores.each_with_index do | saved_store, i |
+            .l2.s2
+              .well.well-sm.center.store{:id => "remove_store_#{saved_store.id}"}
+                = link_to store_path(saved_store.id), class: "thumbnail" do
+                  = image_tag(saved_store.store_img, size: "125x40", alt: saved_store.name)
+                = link_to remove_store_store_path(saved_store.id, store_id: saved_store.id), method: 'post', remote: true, class: "btn btn-default btn-xs" do
+                  %span.glyphicon.glyphicon-remove
+                  Remove
+    .panel.panel-default
+      .panel-heading
+        .panel-title Favorite Coupons 
+        = render 'shared/coupon_tabs'
+      = render 'shared/coupon_tab_content'

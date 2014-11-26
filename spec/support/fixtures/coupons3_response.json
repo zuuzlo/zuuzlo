@@ -1,0 +1,12 @@
+{
+"meta": {
+    "status": {"code": 200, "message": "OK"}, 
+    "pagination": {"total_results": 3, "total_pages": 1},
+     "requests": {"current": 13, "maximum": 1500}
+  },
+
+  "data": [
+    { "id": "71639", "name": "Up to $80 Mail-In Rebate on select Hankook tires + FREE SHIPPING! Click Here!", "code": "http://www.pntrac.com/t/3-71639-104533-104212", "description": "Up to $80 Mail-In Rebate on select Hankook tires + FREE SHIPPING! Click Here!", "start_date": "2014-04-07 00:00:00", "end_date": "2014-06-01 00:00:00", "coupon": "No code Needed", "program_id": "6803", "program_name": "TireCrazy", "category_name": "Coupons" },
+     { "id": "71638", "name": "Up to $100 Mail-in Rebate on Select Kumho Tires + FREE SHIPPING!", "code": "http://www.pjtra.com/t/3-71638-104533-104212", "description": "Up to $100 Mail-in Rebate on Select Kumho Tires + FREE SHIPPING!", "start_date": "2014-04-07 00:00:00", "end_date": "2014-06-01 00:00:00", "coupon": "No code Needed", "program_id": "6803", "program_name": "TireCrazy", "category_name": "Coupons" },
+     { "id": "71637", "name": "TireCrazy.com - Free Shipping on Wheel Purchases! Click Here!", "code": "http://www.gopjn.com/t/3-71637-104533-104212", "description": "TireCrazy.com - Free Shipping on Wheel Purchases! Click Here!", "start_date": "2014-04-07 00:00:00", "end_date": "0000-00-00 00:00:00", "coupon": "No code Needed", "program_id": "6803", "program_name": "TireCrazy", "category_name": "Free Shipping" } ]
+}

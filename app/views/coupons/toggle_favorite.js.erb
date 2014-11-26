@@ -1,0 +1,19 @@
+<%- if @refer_controller != "users" %>
+  <%- if current_user.coupon_ids.include?(@coupon.id) %>
+    $("#toggle_favorite_<%= @coupon.id %>").replaceWith("<a class='btn btn-default btn-xs'" 
+          + "data-method='post' data-remote='true' href='/coupons/<%= @coupon.id %>/toggle_favorite?coupon_id=<%= @coupon.id %>'"
+          + "id='toggle_favorite_<%= @coupon.id %>' rel='nofollow'>"
+          + "<span class='glyphicon glyphicon-remove'></span>"
+          + "Remove from Favorite Coupons"
+          + "</a>");
+  <%- else %>
+    $("#toggle_favorite_<%= @coupon.id %>").replaceWith("<a class='btn btn-default btn-xs'" 
+          + "data-method='post' data-remote='true' href='/coupons/<%= @coupon.id %>/toggle_favorite?coupon_id=<%= @coupon.id %>'"
+          + "id='toggle_favorite_<%= @coupon.id %>' rel='nofollow'>"
+          + "<span class='glyphicon glyphicon-ok'></span>"
+          + "Add to Favorite Coupons"
+          + "</a>");
+  <%- end %>
+<%- else %>
+  $("#coupon_<%= @coupon.id %>").hide("slow")
+<%- end %>

@@ -1,10 +1,10 @@
 class CtypesController < ApplicationController
-  include CouponCodesOffers
+  include LoadCoupons
+  include LoadSeo
+
   def show
     @ctype = Ctype.friendly.find(params[:id])
-    @coupons = @ctype.coupons.where(["end_date >= :time ", { :time => DateTime.current }]).order( 'end_date ASC' )
-
-    @coupon_codes = coupon_codes(@coupons)
-    @coupon_offers = coupon_offers(@coupons)
+    load_all_coupons(@ctype)
+    render 'coupons/display_coupons', locals: { title: @ctype, meta_keywords: seo_keywords(@coupons, @ctype), meta_description: seo_description(@coupons, @ctype)}
   end
 end

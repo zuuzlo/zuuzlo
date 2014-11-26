@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "status": { "code": 200, "message": "Ok" },
+    "requests": { "current": 384, "maximum": 1500 }
+    },
+    "data": [
+      { "id": "4055", "name": "World Class Ink Supply, Inc.", "description": "world class ink description", "logo": "http://media.pepperjamnetwork.com/programs/logos/4055", "prohibited_states": "", "mobile_tracking": "N/A", "category": [{"id": "2", "name": "Computer & Electronics "}, {"id": "7", "name": "Accessories"}, {"id": "49", "name": "Shops/Malls"}], "address1": "47 Cooper Street", "address2": "Rear Unit", "city": "Woodbury", "state_code": "NJ", "zip_code": "08096", "country_code": "US", "phone": "609-556-5338", "website": "http://www.worldclassink.com", "contact_name": "Scott Hoffman", "email": "info@worldclassink.com", "currency": "USD", "status": "joined", "join_date": "2013-08-10", "cookie_duration": "1080", "percentage_payout": "10.000", "flat_payout": "nil" } 
+    ]
+}

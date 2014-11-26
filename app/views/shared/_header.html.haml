@@ -1,6 +1,6 @@
 .container
   .row
-    %nav.navbar.navbar-default{role: 'navigation'}
+    %nav.navbar.navbar-inverse.navbar-fixed-top.yamm{role: 'navigation'}
       .navbar-header
         %button.navbar-toggle{type: 'button', "data-toggle" => 'collapse', "data-target" => ".navbar-ex1-collapse"}
           %span.sr-only Toggle navigation
@@ -11,17 +11,24 @@
         %a.navbar-brand(href='#') ZUUZLO LLC
       .collapse.navbar-collapse.navbar-ex1-collapse 
         %ul.nav.navbar-nav
-          %li=link_to "Home", '#'
-          %li{:class => "#{'active' if current_page?(stores_path)}"}=link_to "Stores", stores_path
+          %li{:class => "#{'active' if current_page?(user_path(current_user))}"}=link_to "Home", user_url(current_user)
+          %li{:class => "#{'active' if current_page?(stores_path)}"}=link_to "Stores", stores_url
           %li.dropdown
             %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
               Categories
               %b.caret
             %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
-              -Category.with_coupons.each do |cat|
-                %li
-                  = link_to category_path(cat) do
-                    #{cat.name}            
+              %li
+                .yamm-content
+                  .row
+                    - all_categories = Category.with_coupons.each_slice(8).to_a
+                    - all_categories.each do | column |
+                      %ul.col-sm-3.list-unstyled
+                        - column.each do | cat |
+                          %li
+                            - cache(cat) do
+                              = link_to category_path(cat) do
+                                #{cat.name}           
           %li.dropdown
             %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
               Offer Types
@@ -33,17 +40,22 @@
           %div.form-group
             %input.form-control{type:"text", name: "search_term", placeholder:"Search", value: "" }
           %button.btn.btn-default(type="submit") Search
-        %ul.nav.navbar-nav.navbar-right
-          %li.dropdown
-            %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
-              Welcome
-              %b.caret
-            %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
-              %li
-                = link_to 'Invite a Friend', '#'
-              %li
-                %a(href="#") Account
-              %li
-                %a(href="#") Plan and Billing
-              %li
-                = link_to 'Sign Out', '#'
+        - if logged_in?  
+          %ul.nav.navbar-nav.navbar-right 
+            %li.dropdown
+              %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
+                Welcome, #{current_user.full_name}
+                %b.caret
+              %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
+                %li
+                  = link_to 'Invite a Friend', '#'
+                %li
+                  = link_to 'Cash Back Transactions', '#'
+                %li
+                  %a(href="#") Plan and Billing
+                %li
+                  = link_to 'Sign Out', sign_out_path
+        - else
+          %ul.nav.navbar-nav.navbar-right
+            %li=link_to "Sign in", sign_in_path
+            %li=link_to "Register", new_user_path

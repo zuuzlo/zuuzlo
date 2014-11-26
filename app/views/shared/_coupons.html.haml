@@ -1,13 +1,12 @@
 -coupons.each_with_index do |coupon, i|
-  -if i % 3 == 0
-    .row
-  .l4.s4{ 'data-type' => "#{coupon_type(coupon)}" }
-    .thumbnail
-      %img{'src' => "#{coupon.store_image}" }
-      .caption.coupon
+  .l4.s4{ 'id' => "coupon_#{coupon.id}", 'data-type' => "#{coupon_type(coupon)}" }
+    .thumbnail.coupon
+      = store_link(controller_name, coupon)
+      .caption
         %h4 #{coupon.title.split("- ").last}
+        -if logged_in?
+          = favorites(controller_name, coupon)
         .well.well-sm
-          = store_link(controller_name, coupon)
           %p
             %b #{coupon.description}
           -if coupon.code
@@ -28,4 +27,3 @@
           %h6
             Restrictions:
             #{coupon.restriction}
-  

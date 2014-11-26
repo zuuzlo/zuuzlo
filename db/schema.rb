@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140304020240) do
+ActiveRecord::Schema.define(version: 20140405130912) do
+
+  create_table "activities", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "store_id"
+    t.integer  "clicks"
+    t.integer  "sales_cents"
+    t.integer  "commission_cents"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -59,6 +69,14 @@ ActiveRecord::Schema.define(version: 20140304020240) do
   add_index "coupons_ctypes", ["coupon_id"], name: "index_coupons_ctypes_on_coupon_id", using: :btree
   add_index "coupons_ctypes", ["ctype_id"], name: "index_coupons_ctypes_on_ctype_id", using: :btree
 
+  create_table "coupons_users", id: false, force: true do |t|
+    t.integer "coupon_id", null: false
+    t.integer "user_id",   null: false
+  end
+
+  add_index "coupons_users", ["coupon_id"], name: "index_coupons_users_on_coupon_id", using: :btree
+  add_index "coupons_users", ["user_id"], name: "index_coupons_users_on_user_id", using: :btree
+
   create_table "ctypes", force: true do |t|
     t.string   "name"
     t.integer  "ls_id"
@@ -83,5 +101,29 @@ ActiveRecord::Schema.define(version: 20140304020240) do
   end
 
   add_index "stores", ["slug"], name: "index_stores_on_slug", unique: true, using: :btree
+
+  create_table "stores_users", id: false, force: true do |t|
+    t.integer "store_id", null: false
+    t.integer "user_id",  null: false
+  end
+
+  add_index "stores_users", ["store_id"], name: "index_stores_users_on_store_id", using: :btree
+  add_index "stores_users", ["user_id"], name: "index_stores_users_on_user_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "full_name"
+    t.string   "token"
+    t.boolean  "admin"
+    t.string   "cashback_id"
+    t.string   "paypal_email"
+    t.string   "slug"
+    t.boolean  "verified_email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["slug"], name: "index_users_on_slug", using: :btree
 
 end

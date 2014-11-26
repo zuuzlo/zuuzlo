@@ -1,0 +1,7 @@
+!!! 5
+%html(lang="en-US")
+  %body
+    %p= @invitation.friends_name
+    %p You have been invited to join MyFlix.
+    %p Please click on linek below to sign up.
+    %p= link_to "Join MyFlix Now", register_with_token_url(@invitation.token)

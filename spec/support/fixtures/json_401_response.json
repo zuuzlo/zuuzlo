@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "status": { "code": 401, "message": "Authentication Error" },
+    "requests": { "current": 384, "maximum": 1500 }
+    },
+    "data": []
+}

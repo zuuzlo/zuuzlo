@@ -25,18 +25,18 @@ describe CtypesController do
       expect(assigns(:coupons)).to eq([coupon[4], coupon[5]])
     end
 
-    it "sets @coupon_codes" do
+    it "sets number of codes_count" do
       coupon1 = Fabricate( :coupon, code: 'now', end_date: Time.now + 1.hour )
       coupon1.ctypes << ctype1
       get :show, id: ctype1.id 
-      expect(assigns(:coupon_codes)).to eq([coupon1])
+      expect(assigns(:codes_count)).to eq(1)
     end
 
-    it "sets @coupon_offers" do
+    it "sets number of offers_count" do
       coupon1 = Fabricate( :coupon, code: nil, end_date: Time.now + 1.hour )
       coupon1.ctypes << ctype1
       get :show, id: ctype1.id 
-      expect(assigns(:coupon_offers)).to eq([coupon1])
+      expect(assigns(:offers_count)).to eq(1)
     end
   end
 end

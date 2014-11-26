@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "status": { "code": 500, "message": "Internal Server Error" },
+    "requests": { "current": 384, "maximum": 1500 }
+    },
+    "data": []
+}

@@ -1,0 +1,7 @@
+!!! 5
+%html(lang="en-US")
+  %body
+    %p= @user.full_name
+    %p Please verify your email to join Zuuzlo
+    %p Please click on link below to registeration process at Zuuzl.com.
+    %p= link_to "Complete Registeration", register_with_token_url(@user.token)

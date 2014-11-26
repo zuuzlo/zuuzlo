@@ -1,16 +1,37 @@
 Zuuzlo::Application.routes.draw do
   
+  get "/sign_in", to: "sessions#new"
+  post "/sign_in", to: "sessions#create"
+  get "/sign_out", to: "sessions#destroy"
+
   root to: 'static_pages#front'
 
   get 'ui(/:action)', controller: 'ui'
+  
+  resources :users, only: [:new, :create, :show]
+  get 'register/:token', to: "users#register_confirmation", as: 'register_with_token'
+  
+  resources :stores, except: [:destory] do
+    member do 
+      post 'save_store'
+      post 'remove_store'
+    end
+  end
 
-  resources :stores, only: [:index, :show]
   resources :categories, only: [:show]
   resources :ctypes, only: [:show]
 
-  resources :coupons, only:[:index] do
+  resources :coupons do
+    member do
+      post 'toggle_favorite'
+      get 'coupon_link'
+    end
+
     collection do
       get 'search', to: 'coupons#search'
+      get 'tab_all'
+      get 'tab_coupon_codes'
+      get 'tab_offers'
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

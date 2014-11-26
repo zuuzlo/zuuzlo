@@ -19,12 +19,58 @@ describe CouponsController do
 
     it "set @coupon_codes" do
        
-      expect(assigns(:coupon_codes)).to eq([coupon1])
+      expect(assigns(:coupon_codes)).to eq(1)
     end
 
     it "set @coupon_offers" do
       
-      expect(assigns(:coupon_offers)).to eq([coupon2])
+      expect(assigns(:coupon_offers)).to eq(1)
+    end
+  end
+
+  describe "POST toggle_favorite" do
+    let!(:store1) { Fabricate(:store) }
+    let!(:coupon1) { coupon1 = Fabricate(:coupon, store_id: store1.id) }
+    context "with authenticated user" do
+      before do
+        set_current_user
+        request.env["HTTP_REFERER"] = store_path(store1) 
+      end
+      after { current_user.coupons.clear }
+
+      it "sets @coupon" do
+        post :toggle_favorite, { id: coupon1.id, coupon_id: coupon1.id }
+        expect(assigns(:coupon)).to eq(coupon1)
+      end
+
+      context "coupon not in favorites" do
+        before do
+          post :toggle_favorite, { id: coupon1.id, coupon_id: coupon1.id }
+        end
+
+        it "adds coupon to users coupons (favorite)" do
+          expect(current_user.coupons.count).to eq(1)
+        end
+
+        it "set flash success" do
+          expect(flash[:success]).to be_present
+        end
+      end
+      
+      context "coupon in favorites" do
+        before do
+          current_user.coupons << coupon1
+          post :toggle_favorite, { id: coupon1.id, coupon_id: coupon1.id }
+        end
+
+        it "removes coupon from users" do
+          expect(current_user.coupons.count).to eq(0)
+        end
+
+        it "set flash success" do
+          expect(flash[:success]).to be_present
+        end
+      end
     end
   end
 end

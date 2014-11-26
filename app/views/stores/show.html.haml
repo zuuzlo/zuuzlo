@@ -1,14 +1,21 @@
 -provide(:title, "Welcome to ZUUZLO Coupons | #{@store.name}")
-.container
-  .page-header
-    %h1 #{@store.name}
-  .row
-    .l12.s12
-      .panel.panel-default
-        .panel-heading
-          .panel-title 
-            Latest coupons for
-            %i
-              #{@store.name}
-          = render 'shared/coupon_tabs'
-        = render 'shared/coupon_tab_content'  
+.page-header
+  %h1 #{@store.name}
+  -if logged_in? && current_user.store_ids.include?(@store.id) == FALSE
+    = link_to save_store_store_path(@store, store_id: @store.id), method: 'post', remote: true, id: "save_store_#{@store.id}", class: "btn btn-default btn-xs" do
+      %span.glyphicon.glyphicon-ok
+      Add to Favorite Stores
+.row
+  .l12.s12
+    .panel.panel-default
+      .panel-heading
+        .panel-title 
+          Latest coupons for
+          %i
+            #{@store.name}
+        = render 'shared/coupon_tabs'
+      .text-center
+        = will_paginate @coupons, renderer: BootstrapPagination::Rails
+      = render 'shared/coupon_tab_content'
+      .text-center
+        = will_paginate @coupons, renderer: BootstrapPagination::Rails

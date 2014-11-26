@@ -3,7 +3,10 @@ class Store < ActiveRecord::Base
   validates :name, presence: true
   validates :id_of_store, presence: true, uniqueness: true
   has_many :coupons, -> { order "end_date ASC" }
+  has_and_belongs_to_many :users
 
+  has_many :activities
+  
   extend FriendlyId
   friendly_id :name, use: :slugged
 
@@ -14,7 +17,7 @@ class Store < ActiveRecord::Base
   def self.load_stores
     oo = Roo::Excel.new("#{Rails.root}/lsstores.xls")
     oo.default_sheet = oo.sheets.first
-    2.upto(188) do | line |
+    2.upto(171) do | line |
       store_hash = {
         name: oo.cell(line, 'A'),
         id_of_store: oo.cell(line, 'C').to_i,

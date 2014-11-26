@@ -6,10 +6,13 @@ class Coupon < ActiveRecord::Base
   belongs_to :store
   has_and_belongs_to_many :categories
   has_and_belongs_to_many :ctypes
+  has_and_belongs_to_many :users
   
   validates :id_of_coupon, presence: true, uniqueness: true
   validates :title, presence: true
   validates :link, presence: true
+
+  self.per_page = 20
 
   def time_left
     distance_of_time_in_words(end_date, DateTime.now)
@@ -48,7 +51,6 @@ class Coupon < ActiveRecord::Base
       title:  link.at_xpath("title").text,
       description: link.at_xpath("offerdescription").text,
       start_date: Time.parse(link.at_xpath("offerstartdate").text),
-      #end_date: (Time.parse(link.at_xpath("offerenddate").text) if link.at_xpath("offerenddate")),
       code: (link.at_xpath("couponcode").text if link.at_xpath("couponcode")),
       restriction: (link.at_xpath("couponrestriction").text if link.at_xpath("couponrestriction")),
       link: link.at_xpath("clickurl").text,
@@ -58,7 +60,6 @@ class Coupon < ActiveRecord::Base
       }
       
       if link.at_xpath("offerenddate").text == ''
-        #requie 'pry';binding.pry
         link_hash[ :end_date ] = Time.parse('2017-1-1') #DateTime.now + 5.years
       else
         link_hash[ :end_date ] = Time.parse(link.at_xpath("offerenddate").text)

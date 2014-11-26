@@ -1,0 +1,31 @@
+.panel.panel-primary{ 'id' => "coupon_#{coupon.id}", 'data-type' => "#{coupon_type(coupon)}" }
+  .panel-body
+    .l2.s2
+      = store_link(controller_name, coupon)
+      %h5
+        %span.label.label-warning
+          #{coupon.store_commission} 
+          \% cash back
+    .l8.s8.coupon
+      %h4 
+        %b
+          #{coupon.title.split("- ").last}
+      .well.well-sm
+        %p
+          %b #{coupon.description}
+        -if coupon.code
+          %h5
+            Coupon Code:
+            %b
+              #{coupon.code}
+        -if coupon.categories.size > 0
+          %h5
+            =render coupon.categories
+        -if coupon.restriction
+          %h6
+            Restrictions:
+            #{coupon.restriction}
+    .l2.s2.coupon
+      = button_link(coupon)
+      %h5
+        = time_left_display(coupon)

@@ -1,0 +1,23 @@
+{"meta":
+  {"status": {"code": 200, "message": "OK"},
+   "pagination": {"total_results": 14, "total_pages": 1},
+   "requests": {"current": 3, "maximum": 1500}},
+ "data":
+  [{"id": "2130",
+    "allow_deep_link": "1",
+    "program_id": "2196",
+    "program_name": "OptiShotGolf.com ",
+    "code": "http://www.pntrac.com/t/8-2130-104533-20946"},
+   {"id": "2318",
+    "allow_deep_link": "1",
+    "program_id": "2384",
+    "program_name": "eFoodsDirect.com",
+    "code": "http://www.pjatr.com/t/8-2318-104533-22710"},
+   {"id": "3989",
+    "allow_deep_link": "0",
+    "program_id": "4055",
+    "program_name": "World Class Ink Supply, Inc.",
+    "code": "http://www.pntra.com/t/8-3989-104533-41153"}
+  ]
+}
+

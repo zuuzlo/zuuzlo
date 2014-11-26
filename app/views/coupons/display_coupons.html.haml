@@ -1,0 +1,17 @@
+-provide(:title, "#{title.name}")
+-provide(:meta_keywords, "#{meta_keywords}") 
+-provide(:meta_description, "#{meta_description}")
+- if @coupons.count > 0
+  .page-header
+    %h1 #{title.name}
+  .row
+    .l12.s12 
+      .text-center
+        = will_paginate @coupons, renderer: BootstrapPagination::Rails
+      = render 'shared/coupon_tab_content'
+      .text-center
+        = will_paginate @coupons, renderer: BootstrapPagination::Rails
+- else
+  %h1 #{title.name}
+  %p
+    Sorry there are no #{title.name} coupons today.  Checkback soon. #{ link_to "Home", root_path }

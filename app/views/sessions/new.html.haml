@@ -1,0 +1,16 @@
+.container
+  .page-header
+    %h1 Sign in
+  .s12.l12
+    .s6.l6.col-md-offset-3
+      .well.well-lg
+        =form_tag('/sign_in', 'role' => 'form') do
+          .form-group
+            = label_tag :email
+            = text_field_tag :email, params[:email], class: 'form-control'
+          .form-group
+            = label_tag :password
+            = password_field_tag :password, params[:password], class: 'form-control'
+          %fieldset.action
+            =submit_tag('Sign in', :class => 'btn btn-success')
+            =#link_to "forgot password?", forgot_password_path

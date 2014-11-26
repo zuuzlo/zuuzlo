@@ -1,16 +1,16 @@
-%ul.nav.nav-pills
+%ul.nav.nav-pills.nav-stacked
   %li.active
-    = link_to '#all', data: { toggle: "pill"} do
+    = link_to tab_all_coupons_path, method: 'get', remote: true, id: 'tab_all_pill' do
       %span.badge.pull-right
         #{@coupons.count}
       ALL
   %li
-    = link_to '#coupon_codes', data: { toggle: "pill"} do
+    = link_to tab_coupon_codes_coupons_path, method: 'get', remote: true, id: 'tab_coupon_codes_pill' do
       %span.badge.pull-right
-        #{@coupon_codes.count}
+        #{@codes_count}
       COUPON CODES
   %li
-    = link_to '#offers', data: { toggle: "pill" } do
+    = link_to tab_offers_coupons_path, method: 'get', remote: true, id: 'tab_offers_pill' do
       %span.badge.pull-right
-        #{@coupon_offers.count}
+        #{@offers_count}
       OFFERS
