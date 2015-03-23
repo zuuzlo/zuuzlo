@@ -545,7 +545,7 @@ $panel-info-heading-bg:       $state-info-bg;
 // Thumbnails
 // -------------------------
 $thumbnail-padding:           4px;
-$thumbnail-bg:                $body-bg;
+$thumbnail-bg:                #fff;//$body-bgs
 $thumbnail-border:            #ddd;
 $thumbnail-border-radius:     $border-radius-base;
 
@@ -761,4 +761,28 @@ body { padding-top: 70px; }
 .yamm .dropdown .yamm-fw .dropdown-menu {
   left: 0;
   right: 0;
+}
+
+/* second Menu */
+
+.secondnavbar {
+  top: 50px;
+  z-index: 100;
+  background:rgba(0,0,0,0.5);
+}
+
+.centered-pills {  
+    text-align: center
+}
+.centered-pills ul.nav-pills {
+    display: inline-block
+}
+.centered-pills li {
+    display: inline
+}
+.centered-pills a {
+    float: left
+}
+* html .centered-pills ul.nav-pills, *+html .centered-pills ul.nav-pills {
+    display: inline
 }

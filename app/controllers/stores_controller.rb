@@ -13,6 +13,7 @@ class StoresController < ApplicationController
     @stores.each do | store |
       @store_array << store.name
     end
+    render layout: 'store_index'
   end
 
   def show

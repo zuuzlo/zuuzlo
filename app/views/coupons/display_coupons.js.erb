@@ -1,0 +1,15 @@
+$('#coupons').append('<%= escape_javascript render(@coupons) %>');
+$('.pagination').replaceWith('<%= escape_javascript will_paginate(@coupons) %>');
+var offerItems = $('#coupons').find("div[data-type='offers']").length;
+var codeItems = $('#coupons').find("div[data-type='coupon_codes']").length;
+$('.offer_count').text(offerItems);
+$('.code_count').text(codeItems);
+if($("li:has(a#tab_coupon_codes_pill)").hasClass("active")){
+	$("div[data-type='offers']").hide("slow");
+	$("div[data-type='coupon_codes']").show("slow");
+};
+
+if($("li:has(a#tab_offers_pill)").hasClass("active")){
+	$("div[data-type='offers']").show("slow");
+	$("div[data-type='coupon_codes']").hide("slow");
+};

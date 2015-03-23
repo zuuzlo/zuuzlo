@@ -1,2 +1,15 @@
-= link_to image_tag("holder.js/100%x240", alt: "..."), "#"
-= render 'shared/coupon_tabs'
+.lh-menu  
+  - if params[:controller] == 'stores'
+    .thumbnail.coupon
+      = image_tag(@store.store_img, width: '100%', height: 'auto') 
+  - else
+    = link_to image_tag("holder.js/100%x240", alt: "..."), "#"
+  .page-header
+    %h4
+      Select Coupons to Display
+  = render 'shared/coupon_tabs'
+  - if params[:controller] == 'stores'
+    .page-header
+      %h4
+        = @store.name
+    = @store.description

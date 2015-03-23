@@ -1,16 +1,19 @@
-%ul.nav.nav-pills.nav-stacked
-  %li.active
-    = link_to tab_all_coupons_path, method: 'get', remote: true, id: 'tab_all_pill' do
-      %span.badge.pull-right
-        #{@coupons.count}
-      ALL
-  %li
-    = link_to tab_coupon_codes_coupons_path, method: 'get', remote: true, id: 'tab_coupon_codes_pill' do
-      %span.badge.pull-right
-        #{@codes_count}
-      COUPON CODES
-  %li
-    = link_to tab_offers_coupons_path, method: 'get', remote: true, id: 'tab_offers_pill' do
-      %span.badge.pull-right
-        #{@offers_count}
-      OFFERS
+.centered-pills  
+  %ul.nav.nav-pills
+    %li.active
+      = link_to tab_all_coupons_path, method: 'get', remote: true, id: 'tab_all_pill' do
+        %span.badge.pull-right
+          #{@coupons.count}
+        ALL
+    %li
+      = link_to tab_coupon_codes_coupons_path, method: 'get', remote: true, id: 'tab_coupon_codes_pill' do
+        %span.badge.pull-right
+          .code_count
+            #{@codes_count}
+        COUPON CODES
+    %li
+      = link_to tab_offers_coupons_path, method: 'get', remote: true, id: 'tab_offers_pill' do
+        %span.badge.pull-right
+          .offer_count
+            #{@offers_count}
+        OFFERS
