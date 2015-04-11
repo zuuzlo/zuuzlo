@@ -1,4 +1,4 @@
--provide(:title, "#{title.name}")
+-provide(:title, "#{title.name} Newest Coupons | Zuuzlo.com")
 -provide(:meta_keywords, "#{meta_keywords}") 
 -provide(:meta_description, "#{meta_description}")
 - if @coupons.count > 0
@@ -9,11 +9,12 @@
       #{title.name}
       %small
         latest coupons
-        - if @coupons.count > 20
+        - if @coupons.count > 50
           %i (scroll to see more)
   .row
     = render 'shared/coupon_tab_content'
-    = will_paginate @coupons
+    %nav#page-nav
+      = will_paginate @coupons
 - else
   %h1 #{title.name}
   %p

@@ -58,42 +58,104 @@ class LsTransactions
       network: 1 
     }
 
+    coupon_ids = Coupon.select(:id_of_coupon).map(&:id_of_coupon)
     response = LinkshareAPI.coupon_web_service(options).all
     response.each do |link|
+      unless ls_coupon_id(link.advertiserid, link.clickurl).in?(coupon_ids)
+        coupon_hash = {
+          store_id: Store.find_by_id_of_store(link.advertiserid.to_i).id,
+          link: link.clickurl,
+          id_of_coupon: ls_coupon_id(link.advertiserid, link.clickurl),
+          description: link.offerdescription,
+          title: title_shorten(link.offerdescription),
+          start_date: Time.parse(link.offerstartdate),
+          code: (link.couponcode if link.couponcode),
+          restriction: (link.couponrestriction if link.couponrestriction),
+          image: "nil",
+          impression_pixel: link.impressionpixel,
+          coupon_source_id: 1
+        }
 
-      coupon_hash = {
-        store_id: Store.find_by_id_of_store(link.advertiserid.to_i).id,
-        link: link.clickurl,
-        id_of_coupon: ls_coupon_id(link.advertiserid, link.clickurl),
-        description: link.offerdescription,
-        title: title_shorten(link.offerdescription),
-        start_date: Time.parse(link.offerstartdate),
-        code: (link.couponcode if link.couponcode),
-        restriction: (link.couponrestriction if link.couponrestriction),
-        image: "nil",
-        impression_pixel: link.impressionpixel,
-        coupon_source_id: 1
-      }
-
-      if link.offerenddate == '' || link.offerenddate.downcase == "ongoing"
-        coupon_hash[ :end_date ] = Time.parse('2017-1-1') #DateTime.now + 5.years
-      else
-        coupon_hash[ :end_date ] = Time.parse(link.offerenddate)
-      end
-
-      new_coupon = Coupon.new(coupon_hash)
-      
-      if new_coupon.save
-  
-        link.categories.category.each do | category |
-          new_coupon.categories << Category.find_by_ls_id(category["id"].to_i) if category["id"]
+        if link.offerenddate == '' || link.offerenddate.downcase == "ongoing"
+          coupon_hash[ :end_date ] = Time.parse('2017-1-1') #DateTime.now + 5.years
+        else
+          coupon_hash[ :end_date ] = Time.parse(link.offerenddate)
         end
 
-        link.promotiontypes.promotiontype.each do | type_x |
-          new_coupon.ctypes << Ctype.find_by_ls_id(type_x["id"].to_i) if type_x["id"]
+        new_coupon = Coupon.new(coupon_hash)
+        
+        if new_coupon.save
+    
+          link.categories.category.each do | category |
+            new_coupon.categories << Category.find_by_ls_id(category["id"].to_i) if category["id"]
+          end
+
+          link.promotiontypes.promotiontype.each do | type_x |
+            new_coupon.ctypes << Ctype.find_by_ls_id(type_x["id"].to_i) if type_x["id"]
+          end
         end
       end
     end
+  end
+
+  def self.load_ls_stores
+    oo = Roo::CSV.new("#{Rails.root}/store.csv", csv_options: {encoding: Encoding::ISO_8859_1})
+    oo.default_sheet = oo.sheets.first
+   
+    current_stores = Store.select(:id_of_store).map(&:id_of_store)
+    
+    2.upto(oo.last_row.to_i) do | line |
+
+      if oo.cell(line, 'C').to_i.in?(current_stores)
+        current_store = Store.find_by(id_of_store: oo.cell(line, 'C').to_i)
+        current_store.update(active_commission: true )   if oo.cell(line, 'H') == 'Active' && current_store.active_commission == false
+
+      else
+        store_hash = {
+          name: oo.cell(line, 'A'),
+          id_of_store: oo.cell(line, 'C').to_i,
+          description: oo.cell(line, 'D'),
+          home_page_url: oo.cell(line, 'G'),
+          commission: oo.cell(line, 'AA').split("%").first.to_f
+        }
+
+        if oo.cell(line, 'H') == 'Active'
+          store_hash[:active_commission] = true
+        else
+          store_hash[:active_commission] = false
+        end
+        
+        ['jpg','gif','png'].each do | ext |
+          store_hash[:store_img] = 'http://merchant.linksynergy.com/fs/logo/lg_' + store_hash[:id_of_store].to_s + '.' + ext  
+          break if Faraday.head(store_hash[:store_img]).status == 200
+        end
+        new_store = Store.new(store_hash)
+        new_store.save
+      end
+    end
+  end
+
+  def self.load_store_list
+    agent = Mechanize.new
+    agent.log = Logger.new "#{Rails.root}/mechanize.log"
+    
+    login_page = agent.get "https://login.linkshare.com/sso/login?service=http://cli.linksynergy.com/cli/publisher/home.php"
+    
+    login_form = login_page.form
+
+    user_field = login_form.field_with(name: "username") 
+    password_field = login_form.field_with(name: "password")
+
+    user_field.value = ENV["LS_USER"]
+    password_field.value = ENV["LS_PASSWORD"]
+
+    home_page = login_form.submit
+
+    avertisers_page = home_page.link_with(text: 'My Advertisers').click
+    report_page = avertisers_page.link_with(text: "\n                    Consolidated Advertiser Report").click
+    file_link = report_page.link_with(text: "\n                    Export to .csv" ).click
+    file_link.save("#{Rails.root}/store.csv")
+    logout_page = report_page.link_with(text: "Logout").click
   end
 
   def self.ls_coupon_id(store_id, link)

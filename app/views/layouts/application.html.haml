@@ -16,12 +16,11 @@
       = javascript_include_tag "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"
     
     = yield :head
-  %body
-    .container
-      %header
-        = render 'shared/header'
-        = #render :partial => 'shared/messages'
-      #flash_hook
-      = yield
-      %footer
-        =render 'shared/footer'
+  %body.container
+    %header
+      = render 'shared/header'
+      = #render :partial => 'shared/messages'
+    #flash_hook
+    = yield
+    %footer
+      =render 'shared/footer'

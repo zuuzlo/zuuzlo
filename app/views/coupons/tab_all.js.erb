@@ -1,5 +1,6 @@
-$("div[data-type='offers']").show("slow");
-$("div[data-type='coupon_codes']").show("slow");
+//$("div[data-type='offers']").show("slow");
+//$("div[data-type='coupon_codes']").show("slow");
+$("#coupons").isotope({ filter: "*" });
 $("li:has(a#tab_all_pill)").addClass("active")
 $("li:has(a#tab_coupon_codes_pill)").removeClass("active")
 $("li:has(a#tab_offers_pill)").removeClass("active")

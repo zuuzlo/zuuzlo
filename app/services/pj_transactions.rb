@@ -30,6 +30,7 @@ class PjTransactions
       end
     end
   end
+  
   def self.pj_update_coupons
     publisher = EBayEnterpriseAffiliateNetwork::Publisher.new
     response = publisher.get("creative/coupon", {})

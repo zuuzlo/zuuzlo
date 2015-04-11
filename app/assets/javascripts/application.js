@@ -11,14 +11,20 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require masonry/jquery.masonry
+//= require isotope/jquery.isotope
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
 //= require turbolinks
 //= require holder
 //= require_tree .
 // Include all twitter's javascripts
 //require bootstrap
 
+/*
 $(document).ready(function() {
   if ($('.pagination').length) {
     $(window).scroll(function() {
@@ -31,3 +37,4 @@ $(document).ready(function() {
     return $(window).scroll();
   }
 });
+*/

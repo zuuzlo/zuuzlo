@@ -1,32 +1,30 @@
-.l6.s6  
-  .panel.panel-primary{ 'id' => "coupon_#{coupon.id}", 'data-type' => "#{coupon_type(coupon)}" }
-    .panel-heading
-      .coupon
-        #{coupon.title.split("- ").last}
-    .panel-body
-      .row
-        .l3.s3.coupon
-          = store_link(controller_name, coupon)
-          %span.label.label-warning
-            #{coupon.store_commission} 
-            \% cash back
-        .l5.s5S.coupon
-          %p
-            %b #{coupon.description}
-          -if coupon.code
-            %h5
-              Coupon Code:
-              %b
-                #{coupon.code}
-          -if coupon.categories.size > 0
-            %h5
-              =render coupon.categories
-          -if coupon.restriction
-            %h6
-              Restrictions:
-              #{coupon.restriction}
-        .l4.s4.coupon
-          = button_link(coupon)
-          %h5
-            = time_left_display(coupon)
+.box.panel.panel-primary{ 'id' => "coupon_#{coupon.id}", 'data-type' => "#{coupon_type(coupon)}", 'class' => "#{coupon_type(coupon)}" }
+  .panel-heading
+    .coupon
+      #{coupon.title.split("- ").last}
+  .panel-body
+    .coupon
+      = store_link(controller_name, coupon)
+      %span.label.label-warning
+        #{coupon.store_commission} 
+        \% cash back
+    .coupon
+      %p
+        %b #{coupon.description}
+      -if coupon.code
+        %h5
+          Coupon Code:
+          %b
+            #{coupon.code}
+      -if coupon.categories.size > 0
+        %h5
+          =render coupon.categories
+      -if coupon.restriction
+        %h6
+          Restrictions:
+          #{coupon.restriction}
+    .coupon
+      = button_link(coupon)
+      %h5
+        = time_left_display(coupon)
 

@@ -12,7 +12,7 @@ class Coupon < ActiveRecord::Base
   validates :title, presence: true
   validates :link, presence: true
 
-  self.per_page = 20
+  self.per_page = 50
 
   def time_left
     distance_of_time_in_words(end_date, DateTime.now)

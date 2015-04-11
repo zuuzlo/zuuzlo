@@ -131,7 +131,68 @@ describe LsTransactions do
 
   describe "title_shorten" do
     it "return shorten title" do
-      expect(LsTransactions.title_shorten("Get More Easter for Your Money with Great Deals & Free Shipping on Orders at Walmart.com!")).to eq("Your Money With Great Deals  Free Shipping")
+      expect(LsTransactions.title_shorten("Get More Easter for Your Money with Great Deals & Free Shipping on Orders at Walmart.com!")).to eq("Great Deals & Free Shipping On Orders At Waltcom")
+    end
+  end
+
+  describe "load_ls_stores" do
+    before do
+      stub_request(:any, /merchant.linksynergy.com/).
+        with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Faraday v0.9.0'}).
+        to_return(:status => 200, :body => "", :headers => {})
+
+      test_csv = Roo::CSV.new("#{Rails.root}/spec/support/test_files/ls_test_store.csv", csv_options: {encoding: Encoding::ISO_8859_1})
+
+      Roo::CSV.stub_chain(:new).and_return( test_csv )
+    end
+
+    context "new stores" do
+      before { LsTransactions.load_ls_stores }
+      it "creates five new stores" do
+        expect(Store.all.count).to eq(5)
+      end
+
+      it "first store is active" do
+        expect(Store.first.active_commission).to be_true
+      end
+
+      it "last store is not active" do
+        expect(Store.last.active_commission).to be_false
+      end
+
+      it "finds image for store" do
+        expect(Store.first.store_img).to eq("http://merchant.linksynergy.com/fs/logo/lg_35298.jpg")
+      end
+    end
+    
+    context "existing store no status change" do
+      let!(:store1) { Fabricate(:store, id_of_store: 35298, active_commission: true )}
+      before { LsTransactions.load_ls_stores }
+      
+      it "first store is the same" do
+        expect(Store.first.name).to eq( store1.name )
+      end
+
+      it "five stores with 4 new 1 ths same" do
+        expect(Store.all.count).to eq(5)
+      end
+    end
+    
+    context "existing store with status change" do
+      let!(:store1) { Fabricate(:store, id_of_store: 35298, active_commission: false )}
+      before { LsTransactions.load_ls_stores }
+      
+      it "changes status of store1" do
+        expect(Store.first.active_commission).to be_true
+      end
+
+      it "first store is the same" do
+        expect(Store.first.name).to eq( store1.name )
+      end
+
+      it "five stores with 4 new 1 ths same" do
+        expect(Store.all.count).to eq(5)
+      end
     end
   end
 end

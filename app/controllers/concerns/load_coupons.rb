@@ -3,12 +3,10 @@ module LoadCoupons
   include CouponCodesOffers
 
   def load_coupons(title)
+    @offers_count = title.coupons.where(["end_date >= :time", { :time => DateTime.current}]).where(code: nil).count
+    total_count = title.coupons.where(["end_date >= :time", { :time => DateTime.current }]).count
+    @codes_count = total_count - @offers_count
     @coupons = title.coupons.where(["end_date >= :time", { :time => DateTime.current }]).paginate(:page => params[:page]).order( 'end_date ASC' )
-  end
-
-  def load_coupon_offer_code(coupons)
-    @codes_count = coupon_codes(coupons)
-    @offers_count = coupon_offers(coupons)
   end
 
   def load_cal_picts(coupons)
@@ -18,7 +16,6 @@ module LoadCoupons
 
   def load_all_coupons(title)
     load_coupons(title)
-    load_coupon_offer_code(@coupons)
     load_cal_picts(@coupons)
   end
 end
