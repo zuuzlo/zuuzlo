@@ -31,6 +31,9 @@ gem 'jquery-turbolinks'
 gem 'mechanize'
 gem 'logger'
 
+gem 'pg'
+gem 'unicorn', '~> 4.8.3'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -44,13 +47,16 @@ end
 
 group :development do
   gem 'haml-rails', '>= 0.3.4'
-  gem 'pg'
   gem 'letter_opener'
+  gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano-rails', '~> 1.1.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv', "~> 2.0"
+  gem 'capistrano-cookbook', require: false
 end
 
 group :production do
-  gem 'rails_12factor'
-  gem 'pg'
+  
 end
 
 group :development, :test do
