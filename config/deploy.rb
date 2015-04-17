@@ -16,7 +16,8 @@ set :keep_releases, 5
 # files we want symlinking to specific entries in shared
 set :linked_files, %w{config/database.yml config/secrets.yml}
 # dirs we want symlinking to shared
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+# removed bin from above
 # this:
 # http://www.capistranorb.com/documentation/getting-started/flow/
 # is worth reading for a quick overview of what tasks are called
