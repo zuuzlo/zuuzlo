@@ -61,9 +61,11 @@ describe PjTransactions do
   end
 
   describe "#pj_update_coupons" do
+    let!(:store1) { Fabricate( :store, id_of_store: 6803, active_commission: true ) }
     let!(:category1) { Fabricate(:category, ls_id: 5) }
-    let!(:type1) { Fabricate(:ctype, ls_id: 7) }
-    let!(:type2) { Fabricate(:ctype, ls_id: 5) }
+    (1..31).each do |i|
+      let!("type#{i}".to_s) { Fabricate(:ctype, ls_id: i) }
+    end
     
     before do
       EBayEnterpriseAffiliateNetwork.api_version = 3
@@ -88,7 +90,7 @@ describe PjTransactions do
       end
 
       it "adds coupon to ctypes" do
-        expect(Coupon.first.ctypes).to eq([ type1, type2 ])
+        expect(Coupon.first.ctypes).to eq([ type5, type7 ])
       end
     end
   end
@@ -96,23 +98,23 @@ describe PjTransactions do
   describe "#pj_coupon_code_valid" do
     context "valid codes" do
       it "returns true" do
-        code = PjTransactions.pj_coupon_code_valid("DSC200901")
+        code = PjTransactions.pj_coupon_code_valid?("DSC200901")
         expect(code).to be_true
       end
     end
     context "invalid code" do
       it "returns false for N/A" do
-        code = PjTransactions.pj_coupon_code_valid("N/A")
+        code = PjTransactions.pj_coupon_code_valid?("N/A")
         expect(code).to be_false
       end
 
       it "returns false for Code Not Needed" do
-        code = PjTransactions.pj_coupon_code_valid("Code Not Needed")
+        code = PjTransactions.pj_coupon_code_valid?("Code Not Needed")
         expect(code).to be_false
       end
 
       it "returns false for Code Not Needed" do
-        code = PjTransactions.pj_coupon_code_valid("No Code Needed")
+        code = PjTransactions.pj_coupon_code_valid?("No Code Needed")
         expect(code).to be_false
       end
     end

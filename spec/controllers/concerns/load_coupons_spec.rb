@@ -29,12 +29,12 @@ describe FakesController do
     end
   end
 
-  describe "#load_coupon_offer_code" do
+  describe "#load_coupons" do
     context "has coupon code, no offers" do
       before do
         coupon1 = Fabricate( :coupon, code: 'now', end_date: Time.now + 1.hour, start_date: Time.now - 12.hour )
         coupon1.categories << cat1
-        subject.load_coupon_offer_code(Coupon.all)
+        subject.load_coupons(cat1)
       end
 
       it "sets @codes_count" do
@@ -49,7 +49,7 @@ describe FakesController do
     it "sets @offers_count" do
       coupon1 = Fabricate( :coupon, code: nil, end_date: Time.now + 1.hour, start_date: Time.now - 12.hour )
       coupon1.categories << cat1
-      subject.load_coupon_offer_code(Coupon.all)
+      subject.load_coupons(cat1)
       expect(assigns(:offers_count)).to eq(1)
     end
   end

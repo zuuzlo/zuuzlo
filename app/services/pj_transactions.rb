@@ -156,7 +156,7 @@ class PjTransactions
 
   def self.pj_find_type(name)
 
-    type_hash = { 1 => [ 'general promotion', 'promotion' ],
+    type_hash = { 1 => [ /general promotion/, /promotion/ ],
       2 => [ /buy one get one/,/buy 1/, /get 1/ ],
       3 => [ /clearance/ ],
       4 => [ /combination savings/ ],
@@ -174,7 +174,7 @@ class PjTransactions
     types = []
 
     type_hash.each do | type_id, match_words |
-      unless match_words.select{ |word| name.downcase.include? word }.join("") == ""
+      unless match_words.select{ |word| word.match(name.downcase) }.join("") == ""
         types << type_id
       end
     end
