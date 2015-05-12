@@ -8,7 +8,7 @@ gem 'bootstrap_form', "~> 2.0.1"
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'fabrication'
-gem 'bcrypt-ruby', '3.0.0'
+#gem 'bcrypt-ruby', '3.0.0'
 gem 'ebay_enterprise_affiliate_network', '~> 1.0.2'
 gem 'find_keywords', '~> 0.0.3'
 
@@ -33,6 +33,9 @@ gem 'logger'
 
 gem 'pg'
 gem 'unicorn', '~> 4.8.3'
+
+gem 'devise'
+gem 'devise-bootstrap-views'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

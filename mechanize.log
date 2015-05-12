@@ -743,3 +743,757 @@ D, [2015-04-04T00:37:01.143161 #11385] DEBUG -- : Read 1437 bytes (1437 total)
 D, [2015-04-04T00:37:01.143493 #11385] DEBUG -- : gzip response
 D, [2015-04-04T00:37:01.146552 #11385] DEBUG -- : saved cookie: CASTGC=
 D, [2015-04-04T00:37:01.147408 #11385] DEBUG -- : saved cookie: CASPRIVACY=
+I, [2015-04-21T22:44:44.227696 #19507]  INFO -- : Net::HTTP::Get: /sso/login?service=http://cli.linksynergy.com/cli/publisher/home.php
+D, [2015-04-21T22:44:44.241329 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:44:44.241643 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:44:44.241753 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:44:44.241856 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:44:44.241959 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:44:44.242057 #19507] DEBUG -- : request-header: host => login.linkshare.com
+I, [2015-04-21T22:44:45.113183 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:44:45.113479 #19507] DEBUG -- : response-header: server => Apache-Coyote/1.1
+D, [2015-04-21T22:44:45.113580 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:44:45.113673 #19507] DEBUG -- : response-header: expires => Thu, 01 Jan 1970 00:00:00 GMT
+D, [2015-04-21T22:44:45.113814 #19507] DEBUG -- : response-header: cache-control => no-cache, no-store
+D, [2015-04-21T22:44:45.113911 #19507] DEBUG -- : response-header: set-cookie => JSESSIONID=D07069A4E7CCF979DD2CED322EDD6279; Path=/sso/; HttpOnly
+D, [2015-04-21T22:44:45.114009 #19507] DEBUG -- : response-header: content-type => text/html;charset=UTF-8
+D, [2015-04-21T22:44:45.114102 #19507] DEBUG -- : response-header: ntcoent-length => 4002
+D, [2015-04-21T22:44:45.114194 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:44:44 GMT
+D, [2015-04-21T22:44:45.114337 #19507] DEBUG -- : response-header: content-encoding => gzip
+D, [2015-04-21T22:44:45.114428 #19507] DEBUG -- : response-header: content-length => 1695
+D, [2015-04-21T22:44:45.114759 #19507] DEBUG -- : Read 1695 bytes (1695 total)
+D, [2015-04-21T22:44:45.115146 #19507] DEBUG -- : gzip response
+D, [2015-04-21T22:44:45.138181 #19507] DEBUG -- : saved cookie: JSESSIONID=D07069A4E7CCF979DD2CED322EDD6279
+I, [2015-04-21T22:44:45.168991 #19507]  INFO -- : form encoding: UTF-8
+D, [2015-04-21T22:44:45.169922 #19507] DEBUG -- : query: "lt=LT-1107392-C1VgNoObbbAe3AYf76DaTzoEy0KdzD&execution=e1s1&_eventId=submit&HEALTHCHECK=HEALTHCHECK+PASSED.&username=zuuzlo&password=sd3472307"
+I, [2015-04-21T22:44:45.176565 #19507]  INFO -- : Net::HTTP::Post: /sso/login;jsessionid=D07069A4E7CCF979DD2CED322EDD6279?service=http://cli.linksynergy.com/cli/publisher/home.php
+D, [2015-04-21T22:44:45.176879 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:44:45.177068 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:44:45.177170 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:44:45.177264 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:44:45.177358 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:44:45.177452 #19507] DEBUG -- : request-header: cookie => JSESSIONID=D07069A4E7CCF979DD2CED322EDD6279
+D, [2015-04-21T22:44:45.177551 #19507] DEBUG -- : request-header: host => login.linkshare.com
+D, [2015-04-21T22:44:45.177676 #19507] DEBUG -- : request-header: referer => https://login.linkshare.com/sso/login?service=http://cli.linksynergy.com/cli/publisher/home.php
+D, [2015-04-21T22:44:45.177773 #19507] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-04-21T22:44:45.177864 #19507] DEBUG -- : request-header: content-length => 142
+I, [2015-04-21T22:44:49.361639 #19507]  INFO -- : status: Net::HTTPFound 1.1 302 Found
+D, [2015-04-21T22:44:49.361937 #19507] DEBUG -- : response-header: server => Apache-Coyote/1.1
+D, [2015-04-21T22:44:49.362063 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:44:49.362322 #19507] DEBUG -- : response-header: expires => Thu, 01 Jan 1970 00:00:00 GMT
+D, [2015-04-21T22:44:49.362428 #19507] DEBUG -- : response-header: cache-control => no-cache, no-store
+D, [2015-04-21T22:44:49.362533 #19507] DEBUG -- : response-header: set-cookie => CASPRIVACY=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/sso/, CASTGC=TGT-333506-7mshHfz9RGamV0oTFfRQHk3LxrkokU50VMSt9iK6QrobxuSgOp-sso-02.linkshare.com; Path=/sso/
+D, [2015-04-21T22:44:49.362627 #19507] DEBUG -- : response-header: location => http://cli.linksynergy.com/cli/publisher/home.php?ticket=ST-391669-5n09schx1zrQZ2BPYwWt-sso-02.linkshare.com
+D, [2015-04-21T22:44:49.362731 #19507] DEBUG -- : response-header: content-length => 0
+D, [2015-04-21T22:44:49.362841 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:44:49 GMT
+D, [2015-04-21T22:44:49.363154 #19507] DEBUG -- : Read 0 bytes (0 total)
+D, [2015-04-21T22:44:49.409667 #19507] DEBUG -- : saved cookie: CASPRIVACY=
+D, [2015-04-21T22:44:49.410383 #19507] DEBUG -- : saved cookie: CASTGC=TGT-333506-7mshHfz9RGamV0oTFfRQHk3LxrkokU50VMSt9iK6QrobxuSgOp-sso-02.linkshare.com
+I, [2015-04-21T22:44:49.410663 #19507]  INFO -- : follow redirect to: http://cli.linksynergy.com/cli/publisher/home.php?ticket=ST-391669-5n09schx1zrQZ2BPYwWt-sso-02.linkshare.com
+I, [2015-04-21T22:44:49.413883 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/home.php?ticket=ST-391669-5n09schx1zrQZ2BPYwWt-sso-02.linkshare.com
+D, [2015-04-21T22:44:49.414162 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:44:49.414324 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:44:49.414421 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:44:49.414516 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:44:49.414614 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:44:49.414713 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+I, [2015-04-21T22:44:51.614054 #19507]  INFO -- : status: Net::HTTPFound 1.1 302 Found
+D, [2015-04-21T22:44:51.614389 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:44:49 GMT
+D, [2015-04-21T22:44:51.614491 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:44:51.614579 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:44:51.614667 #19507] DEBUG -- : response-header: set-cookie => PHPSESSID=4ea3a6e6b8a25bcb21bfdf1ea43ec8d3; path=/, PHPSESSID=ST-391669-5n09schx1zrQZ2BPYwWt-sso-02linksharecom; path=/
+D, [2015-04-21T22:44:51.614820 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:44:51.614929 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:44:51.615033 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:44:51.615136 #19507] DEBUG -- : response-header: location => http://cli.linksynergy.com/cli/publisher/home.php
+D, [2015-04-21T22:44:51.615237 #19507] DEBUG -- : response-header: cneonction => close
+D, [2015-04-21T22:44:51.615337 #19507] DEBUG -- : response-header: transfer-encoding => chunked
+D, [2015-04-21T22:44:51.615429 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:44:51.617786 #19507] DEBUG -- : saved cookie: PHPSESSID=4ea3a6e6b8a25bcb21bfdf1ea43ec8d3
+D, [2015-04-21T22:44:51.618422 #19507] DEBUG -- : saved cookie: PHPSESSID=ST-391669-5n09schx1zrQZ2BPYwWt-sso-02linksharecom
+I, [2015-04-21T22:44:51.618652 #19507]  INFO -- : follow redirect to: http://cli.linksynergy.com/cli/publisher/home.php
+I, [2015-04-21T22:44:51.622094 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/home.php
+D, [2015-04-21T22:44:51.622480 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:44:51.622576 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:44:51.622670 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:44:51.622765 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:44:51.622859 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:44:51.622952 #19507] DEBUG -- : request-header: cookie => PHPSESSID=ST-391669-5n09schx1zrQZ2BPYwWt-sso-02linksharecom
+D, [2015-04-21T22:44:51.623044 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+I, [2015-04-21T22:44:51.797054 #19507]  INFO -- : status: Net::HTTPFound 1.1 302 Found
+D, [2015-04-21T22:44:51.797326 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:44:51 GMT
+D, [2015-04-21T22:44:51.797422 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:44:51.797511 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:44:51.797604 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:44:51.797697 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:44:51.797790 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:44:51.797932 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:44:51 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=kqCGEHo8JIPvmv7B7ngtZrsK4xBhCVA1; path=/, lsid=7001188412; expires=Wed, 22-Apr-2015 04:44:51 GMT; path=/; domain=.cli.linksynergy.com, langpref=deleted; expires=Tue, 22-Apr-2014 03:44:50 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, tids_on=deleted; expires=Tue, 22-Apr-2014 03:44:50 GMT; path=/; domain=.linksynergy.com, currentSid=2914261; expires=Wed, 22-Apr-2015 04:44:51 GMT; path=/; domain=.cli.linksynergy.com, linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0FjDD%2FZIveZWe5iS6n5iLkkBHjNy6CCHuj6UKt87LPZkkhexX6JrdN9OK87Eh73brVeW0GILhTYCJ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; path=/cli/; domain=linksynergy.com, linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0FjDD%2FZIveZWe5iS6n5iLkkBHjNy6CCHuj6UKt87LPZkkhexX6JrdN9OK87Eh73brVeW0GILhTYCJ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; path=/cli/; domain=linksynergy.com
+D, [2015-04-21T22:44:51.798031 #19507] DEBUG -- : response-header: ls_auth => C
+D, [2015-04-21T22:44:51.798122 #19507] DEBUG -- : response-header: ls_id => 7001188412
+D, [2015-04-21T22:44:51.798213 #19507] DEBUG -- : response-header: location => /cli/publisher/home.php?eid=V8uMkWlCTes&lsnoid=NONE
+D, [2015-04-21T22:44:51.798371 #19507] DEBUG -- : response-header: content-length => 0
+D, [2015-04-21T22:44:51.798462 #19507] DEBUG -- : response-header: cneonction => close
+D, [2015-04-21T22:44:51.798556 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:44:51.798848 #19507] DEBUG -- : Read 0 bytes (0 total)
+D, [2015-04-21T22:44:51.800594 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:44:51.801177 #19507] DEBUG -- : saved cookie: PHPSESSID=kqCGEHo8JIPvmv7B7ngtZrsK4xBhCVA1
+D, [2015-04-21T22:44:51.802284 #19507] DEBUG -- : saved cookie: lsid=7001188412
+D, [2015-04-21T22:44:51.803382 #19507] DEBUG -- : saved cookie: langpref=deleted
+D, [2015-04-21T22:44:51.803882 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:44:51.804948 #19507] DEBUG -- : saved cookie: tids_on=deleted
+D, [2015-04-21T22:44:51.806066 #19507] DEBUG -- : saved cookie: currentSid=2914261
+D, [2015-04-21T22:44:51.807111 #19507] DEBUG -- : saved cookie: linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0FjDD%2FZIveZWe5iS6n5iLkkBHjNy6CCHuj6UKt87LPZkkhexX6JrdN9OK87Eh73brVeW0GILhTYCJ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D
+D, [2015-04-21T22:44:51.808106 #19507] DEBUG -- : saved cookie: linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0FjDD%2FZIveZWe5iS6n5iLkkBHjNy6CCHuj6UKt87LPZkkhexX6JrdN9OK87Eh73brVeW0GILhTYCJ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D
+I, [2015-04-21T22:44:51.808455 #19507]  INFO -- : follow redirect to: /cli/publisher/home.php?eid=V8uMkWlCTes&lsnoid=NONE
+I, [2015-04-21T22:44:51.815122 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/home.php?eid=V8uMkWlCTes&lsnoid=NONE
+D, [2015-04-21T22:44:51.815356 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:44:51.815458 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:44:51.815555 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:44:51.815650 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:44:51.815743 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:44:51.815840 #19507] DEBUG -- : request-header: cookie => PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; currentSid=2914261; linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0FjDD%2FZIveZWe5iS6n5iLkkBHjNy6CCHuj6UKt87LPZkkhexX6JrdN9OK87Eh73brVeW0GILhTYCJ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; lsid=7001188412
+D, [2015-04-21T22:44:51.815935 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+I, [2015-04-21T22:44:53.952860 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:44:53.953164 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:44:51 GMT
+D, [2015-04-21T22:44:53.953264 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:44:53.953352 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:44:53.953445 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:44:53.953538 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:44:53.953629 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:44:53.953730 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:44:51 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, welcomeCookie=D; expires=Sun, 03-May-2015 17:31:30 GMT; path=/, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/
+D, [2015-04-21T22:44:53.953823 #19507] DEBUG -- : response-header: ls_auth => C
+D, [2015-04-21T22:44:53.953912 #19507] DEBUG -- : response-header: ls_id => 2914261
+D, [2015-04-21T22:44:53.954001 #19507] DEBUG -- : response-header: cont_prof_id => 7001188412
+D, [2015-04-21T22:44:53.954090 #19507] DEBUG -- : response-header: cneonction => close
+D, [2015-04-21T22:44:53.954180 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:44:53.954366 #19507] DEBUG -- : response-header: content-encoding => gzip
+D, [2015-04-21T22:44:53.954459 #19507] DEBUG -- : response-header: transfer-encoding => chunked
+D, [2015-04-21T22:44:53.954831 #19507] DEBUG -- : Read 4010 bytes (4010 total)
+D, [2015-04-21T22:44:53.955014 #19507] DEBUG -- : Read 2424 bytes (6434 total)
+D, [2015-04-21T22:44:53.993611 #19507] DEBUG -- : Read 1212 bytes (7646 total)
+D, [2015-04-21T22:44:53.994972 #19507] DEBUG -- : Read 1374 bytes (9020 total)
+D, [2015-04-21T22:44:53.995426 #19507] DEBUG -- : gzip response
+D, [2015-04-21T22:44:54.011155 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:44:54.011769 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:44:54.012195 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:44:54.012598 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:44:54.013319 #19507] DEBUG -- : saved cookie: welcomeCookie=D
+D, [2015-04-21T22:44:54.013760 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+I, [2015-04-21T22:44:54.041209 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/programs/advertisers.php?my_programs=1
+D, [2015-04-21T22:44:54.041444 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:44:54.041545 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:44:54.041648 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:44:54.041740 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:44:54.041832 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:44:54.041928 #19507] DEBUG -- : request-header: cookie => PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; currentSid=2914261; langpref=en; linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0FjDD%2FZIveZWe5iS6n5iLkkBHjNy6CCHuj6UKt87LPZkkhexX6JrdN9OK87Eh73brVeW0GILhTYCJ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; lsid=7001188412; welcomeCookie=D
+D, [2015-04-21T22:44:54.042023 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+D, [2015-04-21T22:44:54.042146 #19507] DEBUG -- : request-header: referer => http://cli.linksynergy.com/cli/publisher/home.php?eid=V8uMkWlCTes&lsnoid=NONE
+I, [2015-04-21T22:44:58.981906 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:44:58.982208 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:44:53 GMT
+D, [2015-04-21T22:44:58.982353 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:44:58.982443 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:44:58.982546 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:44:58.982643 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:44:58.982736 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:44:58.982834 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:44:53 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/
+D, [2015-04-21T22:44:58.982926 #19507] DEBUG -- : response-header: ls_auth => C
+D, [2015-04-21T22:44:58.983017 #19507] DEBUG -- : response-header: ls_id => 2914261
+D, [2015-04-21T22:44:58.983109 #19507] DEBUG -- : response-header: cont_prof_id => 7001188412
+D, [2015-04-21T22:44:58.983200 #19507] DEBUG -- : response-header: cneonction => close
+D, [2015-04-21T22:44:58.983289 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:44:58.983379 #19507] DEBUG -- : response-header: content-encoding => gzip
+D, [2015-04-21T22:44:58.983472 #19507] DEBUG -- : response-header: transfer-encoding => chunked
+D, [2015-04-21T22:44:58.983785 #19507] DEBUG -- : Read 4150 bytes (4150 total)
+D, [2015-04-21T22:44:58.983953 #19507] DEBUG -- : Read 2424 bytes (6574 total)
+D, [2015-04-21T22:44:59.021670 #19507] DEBUG -- : Read 3636 bytes (10210 total)
+D, [2015-04-21T22:44:59.022582 #19507] DEBUG -- : Read 1212 bytes (11422 total)
+D, [2015-04-21T22:44:59.031534 #19507] DEBUG -- : Read 592 bytes (12014 total)
+D, [2015-04-21T22:44:59.031798 #19507] DEBUG -- : Read 4248 bytes (16262 total)
+D, [2015-04-21T22:44:59.032587 #19507] DEBUG -- : Read 1212 bytes (17474 total)
+D, [2015-04-21T22:44:59.408900 #19507] DEBUG -- : Read 133 bytes (17607 total)
+D, [2015-04-21T22:44:59.409271 #19507] DEBUG -- : Read 3495 bytes (21102 total)
+D, [2015-04-21T22:44:59.629776 #19507] DEBUG -- : Read 750 bytes (21852 total)
+D, [2015-04-21T22:44:59.630170 #19507] DEBUG -- : Read 2878 bytes (24730 total)
+D, [2015-04-21T22:44:59.630831 #19507] DEBUG -- : Read 1212 bytes (25942 total)
+D, [2015-04-21T22:44:59.637665 #19507] DEBUG -- : Read 130 bytes (26072 total)
+D, [2015-04-21T22:44:59.637889 #19507] DEBUG -- : Read 2097 bytes (28169 total)
+D, [2015-04-21T22:44:59.638219 #19507] DEBUG -- : gzip response
+D, [2015-04-21T22:45:00.008061 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:45:00.008556 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:45:00.008798 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:45:00.009011 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+I, [2015-04-21T22:45:00.070976 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/programs/consolidatedAdvertiserReport.php
+D, [2015-04-21T22:45:00.071101 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:45:00.071150 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:45:00.071198 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:45:00.071250 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:45:00.071295 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:45:00.071344 #19507] DEBUG -- : request-header: cookie => PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; currentSid=2914261; langpref=en; linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0FjDD%2FZIveZWe5iS6n5iLkkBHjNy6CCHuj6UKt87LPZkkhexX6JrdN9OK87Eh73brVeW0GILhTYCJ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; lsid=7001188412; welcomeCookie=D
+D, [2015-04-21T22:45:00.071393 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+D, [2015-04-21T22:45:00.071452 #19507] DEBUG -- : request-header: referer => http://cli.linksynergy.com/cli/publisher/programs/advertisers.php?my_programs=1
+I, [2015-04-21T22:45:02.611393 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:45:02.611698 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:44:59 GMT
+D, [2015-04-21T22:45:02.611802 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:45:02.611894 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:45:02.612046 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:45:02.612151 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:45:02.612252 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:45:02.612361 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:44:59 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/
+D, [2015-04-21T22:45:02.612494 #19507] DEBUG -- : response-header: ls_auth => C
+D, [2015-04-21T22:45:02.612595 #19507] DEBUG -- : response-header: ls_id => 2914261
+D, [2015-04-21T22:45:02.612686 #19507] DEBUG -- : response-header: cont_prof_id => 7001188412
+D, [2015-04-21T22:45:02.612779 #19507] DEBUG -- : response-header: cneonction => close
+D, [2015-04-21T22:45:02.612873 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:45:02.612966 #19507] DEBUG -- : response-header: content-encoding => gzip
+D, [2015-04-21T22:45:02.613058 #19507] DEBUG -- : response-header: transfer-encoding => chunked
+D, [2015-04-21T22:45:02.613414 #19507] DEBUG -- : Read 4150 bytes (4150 total)
+D, [2015-04-21T22:45:02.613614 #19507] DEBUG -- : Read 2424 bytes (6574 total)
+D, [2015-04-21T22:45:02.652139 #19507] DEBUG -- : Read 4252 bytes (10826 total)
+D, [2015-04-21T22:45:02.652443 #19507] DEBUG -- : Read 588 bytes (11414 total)
+D, [2015-04-21T22:45:02.653188 #19507] DEBUG -- : Read 2424 bytes (13838 total)
+D, [2015-04-21T22:45:02.654595 #19507] DEBUG -- : Read 629 bytes (14467 total)
+D, [2015-04-21T22:45:02.655222 #19507] DEBUG -- : gzip response
+D, [2015-04-21T22:45:02.691324 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:45:02.691951 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:45:02.692386 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:45:02.692798 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+I, [2015-04-21T22:45:02.736084 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/programs/carDownload.php?id=8100
+D, [2015-04-21T22:45:02.736325 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:45:02.736421 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:45:02.736516 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:45:02.736610 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:45:02.736705 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:45:02.736802 #19507] DEBUG -- : request-header: cookie => PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; currentSid=2914261; langpref=en; linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0FjDD%2FZIveZWe5iS6n5iLkkBHjNy6CCHuj6UKt87LPZkkhexX6JrdN9OK87Eh73brVeW0GILhTYCJ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; lsid=7001188412; welcomeCookie=D
+D, [2015-04-21T22:45:02.736898 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+D, [2015-04-21T22:45:02.737005 #19507] DEBUG -- : request-header: referer => http://cli.linksynergy.com/cli/publisher/programs/consolidatedAdvertiserReport.php
+I, [2015-04-21T22:45:03.240834 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:45:03.241125 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:45:02 GMT
+D, [2015-04-21T22:45:03.241311 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:45:03.241405 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:45:03.241503 #19507] DEBUG -- : response-header: expires => Wed, 22 Apr 2015 03:45:07 GMT
+D, [2015-04-21T22:45:03.241599 #19507] DEBUG -- : response-header: cache-control => must-revalidate, post-check=0, pre-check=0, max-age=0
+D, [2015-04-21T22:45:03.241731 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:45:03.241832 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:45:02 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/
+D, [2015-04-21T22:45:03.241927 #19507] DEBUG -- : response-header: ls_auth => C
+D, [2015-04-21T22:45:03.242021 #19507] DEBUG -- : response-header: ls_id => 2914261
+D, [2015-04-21T22:45:03.242111 #19507] DEBUG -- : response-header: cont_prof_id => 7001188412
+D, [2015-04-21T22:45:03.242203 #19507] DEBUG -- : response-header: content-disposition => attachment; filename="caReport.csv"
+D, [2015-04-21T22:45:03.242346 #19507] DEBUG -- : response-header: nncoection => close
+D, [2015-04-21T22:45:03.242439 #19507] DEBUG -- : response-header: transfer-encoding => chunked
+D, [2015-04-21T22:45:03.242533 #19507] DEBUG -- : response-header: content-type => application/vnd.ms-excel; charset=UTF-8
+D, [2015-04-21T22:45:03.242814 #19507] DEBUG -- : Read 1750 bytes (1750 total)
+D, [2015-04-21T22:45:03.281517 #19507] DEBUG -- : Read 2424 bytes (4174 total)
+D, [2015-04-21T22:45:03.283960 #19507] DEBUG -- : Read 2424 bytes (6598 total)
+D, [2015-04-21T22:45:03.322051 #19507] DEBUG -- : Read 1417 bytes (8015 total)
+D, [2015-04-21T22:45:04.089725 #19507] DEBUG -- : Read 3630 bytes (11645 total)
+D, [2015-04-21T22:45:04.131700 #19507] DEBUG -- : Read 2424 bytes (14069 total)
+D, [2015-04-21T22:45:04.139294 #19507] DEBUG -- : Read 2488 bytes (16557 total)
+D, [2015-04-21T22:45:04.665570 #19507] DEBUG -- : Read 3630 bytes (20187 total)
+D, [2015-04-21T22:45:04.708607 #19507] DEBUG -- : Read 2424 bytes (22611 total)
+D, [2015-04-21T22:45:04.718186 #19507] DEBUG -- : Read 2156 bytes (24767 total)
+D, [2015-04-21T22:45:05.210907 #19507] DEBUG -- : Read 2418 bytes (27185 total)
+D, [2015-04-21T22:45:05.211765 #19507] DEBUG -- : Read 1212 bytes (28397 total)
+D, [2015-04-21T22:45:05.251542 #19507] DEBUG -- : Read 2424 bytes (30821 total)
+D, [2015-04-21T22:45:05.261002 #19507] DEBUG -- : Read 2235 bytes (33056 total)
+D, [2015-04-21T22:45:05.794457 #19507] DEBUG -- : Read 2418 bytes (35474 total)
+D, [2015-04-21T22:45:05.888190 #19507] DEBUG -- : Read 6202 bytes (41676 total)
+D, [2015-04-21T22:45:06.285047 #19507] DEBUG -- : Read 3630 bytes (45306 total)
+D, [2015-04-21T22:45:06.326213 #19507] DEBUG -- : Read 2424 bytes (47730 total)
+D, [2015-04-21T22:45:06.335928 #19507] DEBUG -- : Read 2161 bytes (49891 total)
+D, [2015-04-21T22:45:07.080531 #19507] DEBUG -- : Read 3630 bytes (53521 total)
+D, [2015-04-21T22:45:07.121531 #19507] DEBUG -- : Read 2424 bytes (55945 total)
+D, [2015-04-21T22:45:07.129825 #19507] DEBUG -- : Read 2424 bytes (58369 total)
+D, [2015-04-21T22:45:07.131269 #19507] DEBUG -- : Read 735 bytes (59104 total)
+D, [2015-04-21T22:45:07.760755 #19507] DEBUG -- : Read 3630 bytes (62734 total)
+D, [2015-04-21T22:45:07.800564 #19507] DEBUG -- : Read 2424 bytes (65158 total)
+D, [2015-04-21T22:45:07.810329 #19507] DEBUG -- : Read 2589 bytes (67747 total)
+D, [2015-04-21T22:45:08.258428 #19507] DEBUG -- : Read 4842 bytes (72589 total)
+D, [2015-04-21T22:45:08.299295 #19507] DEBUG -- : Read 2424 bytes (75013 total)
+D, [2015-04-21T22:45:08.310936 #19507] DEBUG -- : Read 985 bytes (75998 total)
+D, [2015-04-21T22:45:08.693086 #19507] DEBUG -- : Read 4842 bytes (80840 total)
+D, [2015-04-21T22:45:08.733588 #19507] DEBUG -- : Read 2424 bytes (83264 total)
+D, [2015-04-21T22:45:08.742417 #19507] DEBUG -- : Read 1481 bytes (84745 total)
+D, [2015-04-21T22:45:09.197823 #19507] DEBUG -- : Read 3630 bytes (88375 total)
+D, [2015-04-21T22:45:09.240279 #19507] DEBUG -- : Read 4848 bytes (93223 total)
+D, [2015-04-21T22:45:09.241179 #19507] DEBUG -- : Read 43 bytes (93266 total)
+D, [2015-04-21T22:45:10.525763 #19507] DEBUG -- : Read 3630 bytes (96896 total)
+D, [2015-04-21T22:45:10.567039 #19507] DEBUG -- : Read 2424 bytes (99320 total)
+D, [2015-04-21T22:45:10.576344 #19507] DEBUG -- : Read 3636 bytes (102956 total)
+D, [2015-04-21T22:45:10.611173 #19507] DEBUG -- : Read 1673 bytes (104629 total)
+D, [2015-04-21T22:45:11.025808 #19507] DEBUG -- : Read 4842 bytes (109471 total)
+D, [2015-04-21T22:45:11.066953 #19507] DEBUG -- : Read 3436 bytes (112907 total)
+D, [2015-04-21T22:45:11.563211 #19507] DEBUG -- : Read 4842 bytes (117749 total)
+D, [2015-04-21T22:45:11.605282 #19507] DEBUG -- : Read 3876 bytes (121625 total)
+D, [2015-04-21T22:45:11.951848 #19507] DEBUG -- : Read 3630 bytes (125255 total)
+D, [2015-04-21T22:45:11.993554 #19507] DEBUG -- : Read 2424 bytes (127679 total)
+D, [2015-04-21T22:45:12.003778 #19507] DEBUG -- : Read 2055 bytes (129734 total)
+D, [2015-04-21T22:45:12.411300 #19507] DEBUG -- : Read 3630 bytes (133364 total)
+D, [2015-04-21T22:45:12.452715 #19507] DEBUG -- : Read 2424 bytes (135788 total)
+D, [2015-04-21T22:45:12.460775 #19507] DEBUG -- : Read 2394 bytes (138182 total)
+D, [2015-04-21T22:45:12.910657 #19507] DEBUG -- : Read 3630 bytes (141812 total)
+D, [2015-04-21T22:45:12.955913 #19507] DEBUG -- : Read 1212 bytes (143024 total)
+D, [2015-04-21T22:45:12.957078 #19507] DEBUG -- : Read 1212 bytes (144236 total)
+D, [2015-04-21T22:45:12.966126 #19507] DEBUG -- : Read 2749 bytes (146985 total)
+D, [2015-04-21T22:45:13.421204 #19507] DEBUG -- : Read 3630 bytes (150615 total)
+D, [2015-04-21T22:45:13.464005 #19507] DEBUG -- : Read 2424 bytes (153039 total)
+D, [2015-04-21T22:45:13.470975 #19507] DEBUG -- : Read 2080 bytes (155119 total)
+D, [2015-04-21T22:45:13.729714 #19507] DEBUG -- : Read 3630 bytes (158749 total)
+D, [2015-04-21T22:45:13.769871 #19507] DEBUG -- : Read 2424 bytes (161173 total)
+D, [2015-04-21T22:45:13.782714 #19507] DEBUG -- : Read 1974 bytes (163147 total)
+D, [2015-04-21T22:45:14.551757 #19507] DEBUG -- : Read 3630 bytes (166777 total)
+D, [2015-04-21T22:45:14.594593 #19507] DEBUG -- : Read 2424 bytes (169201 total)
+D, [2015-04-21T22:45:14.603932 #19507] DEBUG -- : Read 2775 bytes (171976 total)
+D, [2015-04-21T22:45:15.446906 #19507] DEBUG -- : Read 3630 bytes (175606 total)
+D, [2015-04-21T22:45:15.488181 #19507] DEBUG -- : Read 2424 bytes (178030 total)
+D, [2015-04-21T22:45:15.496508 #19507] DEBUG -- : Read 2140 bytes (180170 total)
+D, [2015-04-21T22:45:15.866856 #19507] DEBUG -- : Read 3630 bytes (183800 total)
+D, [2015-04-21T22:45:15.910369 #19507] DEBUG -- : Read 4848 bytes (188648 total)
+D, [2015-04-21T22:45:15.911190 #19507] DEBUG -- : Read 416 bytes (189064 total)
+D, [2015-04-21T22:45:16.704528 #19507] DEBUG -- : Read 3630 bytes (192694 total)
+D, [2015-04-21T22:45:16.747191 #19507] DEBUG -- : Read 2424 bytes (195118 total)
+D, [2015-04-21T22:45:16.755179 #19507] DEBUG -- : Read 2488 bytes (197606 total)
+D, [2015-04-21T22:45:17.208871 #19507] DEBUG -- : Read 3630 bytes (201236 total)
+D, [2015-04-21T22:45:17.249329 #19507] DEBUG -- : Read 4848 bytes (206084 total)
+D, [2015-04-21T22:45:17.250176 #19507] DEBUG -- : Read 428 bytes (206512 total)
+D, [2015-04-21T22:45:17.572627 #19507] DEBUG -- : Read 3630 bytes (210142 total)
+D, [2015-04-21T22:45:17.614007 #19507] DEBUG -- : Read 2424 bytes (212566 total)
+D, [2015-04-21T22:45:17.624354 #19507] DEBUG -- : Read 2190 bytes (214756 total)
+D, [2015-04-21T22:45:18.359831 #19507] DEBUG -- : Read 3630 bytes (218386 total)
+D, [2015-04-21T22:45:18.401037 #19507] DEBUG -- : Read 2424 bytes (220810 total)
+D, [2015-04-21T22:45:18.408958 #19507] DEBUG -- : Read 2807 bytes (223617 total)
+D, [2015-04-21T22:45:18.468474 #19507] DEBUG -- : Read 2709 bytes (226326 total)
+D, [2015-04-21T22:45:18.472752 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:45:18.473660 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:45:18.474451 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+I, [2015-04-21T22:45:18.482712 #19507]  INFO -- : Net::HTTP::Get: /cli/common/logout.php
+D, [2015-04-21T22:45:18.483212 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:45:18.483430 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:45:18.483669 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:45:18.483877 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:45:18.484082 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:45:18.484287 #19507] DEBUG -- : request-header: cookie => PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; currentSid=2914261; langpref=en; linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0FjDD%2FZIveZWe5iS6n5iLkkBHjNy6CCHuj6UKt87LPZkkhexX6JrdN9OK87Eh73brVeW0GILhTYCJ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; lsid=7001188412; welcomeCookie=D
+D, [2015-04-21T22:45:18.484492 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+D, [2015-04-21T22:45:18.484730 #19507] DEBUG -- : request-header: referer => http://cli.linksynergy.com/cli/publisher/programs/consolidatedAdvertiserReport.php
+I, [2015-04-21T22:45:19.065279 #19507]  INFO -- : status: Net::HTTPFound 1.1 302 Found
+D, [2015-04-21T22:45:19.065598 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:45:18 GMT
+D, [2015-04-21T22:45:19.065700 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:45:19.065791 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:45:19.065880 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:45:19.065976 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:45:19.066072 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:45:19.066177 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:45:18 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ; path=/, linksynergyCLI=deleted; expires=Tue, 22-Apr-2014 03:45:17 GMT; path=/cli/; domain=linksynergy.com, lsid=deleted; expires=Tue, 22-Apr-2014 03:45:17 GMT; path=/; domain=.cli.linksynergy.com, langpref=deleted; expires=Tue, 22-Apr-2014 03:45:17 GMT; path=/; domain=.cli.linksynergy.com, currentSid=deleted; expires=Tue, 22-Apr-2014 03:45:17 GMT; path=/; domain=.cli.linksynergy.com
+D, [2015-04-21T22:45:19.066340 #19507] DEBUG -- : response-header: location => https://login.linkshare.com/sso/logout?service=http%3A%2F%2Fcli.linksynergy.com%2Fcli%2Fpublisher%2Fhome.php
+D, [2015-04-21T22:45:19.066501 #19507] DEBUG -- : response-header: content-length => 452
+D, [2015-04-21T22:45:19.066616 #19507] DEBUG -- : response-header: nncoection => close
+D, [2015-04-21T22:45:19.066763 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:45:19.067096 #19507] DEBUG -- : Read 452 bytes (452 total)
+D, [2015-04-21T22:45:19.069753 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:45:19.070454 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:45:19.070934 #19507] DEBUG -- : saved cookie: PHPSESSID=aqQuYjtgHyH7bX5hyENaAjNo2S4aAXGZ
+D, [2015-04-21T22:45:19.072080 #19507] DEBUG -- : saved cookie: linksynergyCLI=deleted
+D, [2015-04-21T22:45:19.073257 #19507] DEBUG -- : saved cookie: lsid=deleted
+D, [2015-04-21T22:45:19.074438 #19507] DEBUG -- : saved cookie: langpref=deleted
+D, [2015-04-21T22:45:19.075563 #19507] DEBUG -- : saved cookie: currentSid=deleted
+I, [2015-04-21T22:45:19.075844 #19507]  INFO -- : follow redirect to: https://login.linkshare.com/sso/logout?service=http%3A%2F%2Fcli.linksynergy.com%2Fcli%2Fpublisher%2Fhome.php
+I, [2015-04-21T22:45:19.080214 #19507]  INFO -- : Net::HTTP::Get: /sso/logout?service=http%3A%2F%2Fcli.linksynergy.com%2Fcli%2Fpublisher%2Fhome.php
+D, [2015-04-21T22:45:19.080478 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:45:19.080579 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:45:19.080672 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:45:19.080768 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:45:19.080862 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:45:19.080957 #19507] DEBUG -- : request-header: cookie => CASTGC=TGT-333506-7mshHfz9RGamV0oTFfRQHk3LxrkokU50VMSt9iK6QrobxuSgOp-sso-02.linkshare.com; JSESSIONID=D07069A4E7CCF979DD2CED322EDD6279
+D, [2015-04-21T22:45:19.081048 #19507] DEBUG -- : request-header: host => login.linkshare.com
+D, [2015-04-21T22:45:19.081165 #19507] DEBUG -- : request-header: referer => http://cli.linksynergy.com/cli/publisher/programs/consolidatedAdvertiserReport.php
+I, [2015-04-21T22:45:22.034193 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:45:22.034543 #19507] DEBUG -- : response-header: server => Apache-Coyote/1.1
+D, [2015-04-21T22:45:22.034645 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:45:22.034742 #19507] DEBUG -- : response-header: expires => Thu, 01 Jan 1970 00:00:00 GMT
+D, [2015-04-21T22:45:22.034835 #19507] DEBUG -- : response-header: cache-control => no-cache, no-store
+D, [2015-04-21T22:45:22.034936 #19507] DEBUG -- : response-header: set-cookie => CASTGC=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/sso/, CASPRIVACY=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/sso/
+D, [2015-04-21T22:45:22.035035 #19507] DEBUG -- : response-header: content-type => text/html;charset=UTF-8
+D, [2015-04-21T22:45:22.035132 #19507] DEBUG -- : response-header: content-language => en-US
+D, [2015-04-21T22:45:22.035226 #19507] DEBUG -- : response-header: ntcoent-length => 3274
+D, [2015-04-21T22:45:22.035321 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:45:21 GMT
+D, [2015-04-21T22:45:22.035418 #19507] DEBUG -- : response-header: content-encoding => gzip
+D, [2015-04-21T22:45:22.035512 #19507] DEBUG -- : response-header: content-length => 1437
+D, [2015-04-21T22:45:22.035821 #19507] DEBUG -- : Read 1437 bytes (1437 total)
+D, [2015-04-21T22:45:22.036147 #19507] DEBUG -- : gzip response
+D, [2015-04-21T22:45:22.039170 #19507] DEBUG -- : saved cookie: CASTGC=
+D, [2015-04-21T22:45:22.040039 #19507] DEBUG -- : saved cookie: CASPRIVACY=
+I, [2015-04-21T22:51:41.085444 #19507]  INFO -- : Net::HTTP::Get: /sso/login?service=http://cli.linksynergy.com/cli/publisher/home.php
+D, [2015-04-21T22:51:41.085791 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:51:41.085894 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:51:41.085986 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:51:41.086093 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:51:41.086200 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:51:41.086352 #19507] DEBUG -- : request-header: host => login.linkshare.com
+I, [2015-04-21T22:51:42.010606 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:51:42.010900 #19507] DEBUG -- : response-header: server => Apache-Coyote/1.1
+D, [2015-04-21T22:51:42.011000 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:51:42.011091 #19507] DEBUG -- : response-header: expires => Thu, 01 Jan 1970 00:00:00 GMT
+D, [2015-04-21T22:51:42.011181 #19507] DEBUG -- : response-header: cache-control => no-cache, no-store
+D, [2015-04-21T22:51:42.011336 #19507] DEBUG -- : response-header: set-cookie => JSESSIONID=D93499727255B696C0891BD4A68FB20F; Path=/sso/; HttpOnly
+D, [2015-04-21T22:51:42.011473 #19507] DEBUG -- : response-header: content-type => text/html;charset=UTF-8
+D, [2015-04-21T22:51:42.011576 #19507] DEBUG -- : response-header: ntcoent-length => 4002
+D, [2015-04-21T22:51:42.011679 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:51:41 GMT
+D, [2015-04-21T22:51:42.011780 #19507] DEBUG -- : response-header: content-encoding => gzip
+D, [2015-04-21T22:51:42.011882 #19507] DEBUG -- : response-header: content-length => 1699
+D, [2015-04-21T22:51:42.012182 #19507] DEBUG -- : Read 1699 bytes (1699 total)
+D, [2015-04-21T22:51:42.012549 #19507] DEBUG -- : gzip response
+D, [2015-04-21T22:51:42.015274 #19507] DEBUG -- : saved cookie: JSESSIONID=D93499727255B696C0891BD4A68FB20F
+I, [2015-04-21T22:51:42.019913 #19507]  INFO -- : form encoding: UTF-8
+D, [2015-04-21T22:51:42.020735 #19507] DEBUG -- : query: "lt=LT-1107609-TCODbF4xI9RfCYwZIQgeXrGJRJTXvH&execution=e1s1&_eventId=submit&HEALTHCHECK=HEALTHCHECK+PASSED.&username=zuuzlo&password=sd3472307"
+I, [2015-04-21T22:51:42.026392 #19507]  INFO -- : Net::HTTP::Post: /sso/login;jsessionid=D93499727255B696C0891BD4A68FB20F?service=http://cli.linksynergy.com/cli/publisher/home.php
+D, [2015-04-21T22:51:42.026671 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:51:42.026769 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:51:42.026860 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:51:42.026950 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:51:42.027043 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:51:42.027132 #19507] DEBUG -- : request-header: cookie => JSESSIONID=D93499727255B696C0891BD4A68FB20F
+D, [2015-04-21T22:51:42.027220 #19507] DEBUG -- : request-header: host => login.linkshare.com
+D, [2015-04-21T22:51:42.027336 #19507] DEBUG -- : request-header: referer => https://login.linkshare.com/sso/login?service=http://cli.linksynergy.com/cli/publisher/home.php
+D, [2015-04-21T22:51:42.027428 #19507] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-04-21T22:51:42.027516 #19507] DEBUG -- : request-header: content-length => 142
+I, [2015-04-21T22:51:46.430658 #19507]  INFO -- : status: Net::HTTPFound 1.1 302 Found
+D, [2015-04-21T22:51:46.430954 #19507] DEBUG -- : response-header: server => Apache-Coyote/1.1
+D, [2015-04-21T22:51:46.431079 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:51:46.431253 #19507] DEBUG -- : response-header: expires => Thu, 01 Jan 1970 00:00:00 GMT
+D, [2015-04-21T22:51:46.431387 #19507] DEBUG -- : response-header: cache-control => no-cache, no-store
+D, [2015-04-21T22:51:46.431479 #19507] DEBUG -- : response-header: set-cookie => CASPRIVACY=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/sso/, CASTGC=TGT-333558-RsogfSA6A2GEJqioPXDXCUCAcUYnQEG2F1b9LEziosg47vNIfo-sso-02.linkshare.com; Path=/sso/
+D, [2015-04-21T22:51:46.431573 #19507] DEBUG -- : response-header: location => http://cli.linksynergy.com/cli/publisher/home.php?ticket=ST-391722-SWAevdwGvx4mF3rRCu5G-sso-02.linkshare.com
+D, [2015-04-21T22:51:46.431660 #19507] DEBUG -- : response-header: content-length => 0
+D, [2015-04-21T22:51:46.431770 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:51:46 GMT
+D, [2015-04-21T22:51:46.432010 #19507] DEBUG -- : Read 0 bytes (0 total)
+D, [2015-04-21T22:51:46.433410 #19507] DEBUG -- : saved cookie: CASPRIVACY=
+D, [2015-04-21T22:51:46.433939 #19507] DEBUG -- : saved cookie: CASTGC=TGT-333558-RsogfSA6A2GEJqioPXDXCUCAcUYnQEG2F1b9LEziosg47vNIfo-sso-02.linkshare.com
+I, [2015-04-21T22:51:46.434167 #19507]  INFO -- : follow redirect to: http://cli.linksynergy.com/cli/publisher/home.php?ticket=ST-391722-SWAevdwGvx4mF3rRCu5G-sso-02.linkshare.com
+I, [2015-04-21T22:51:46.437288 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/home.php?ticket=ST-391722-SWAevdwGvx4mF3rRCu5G-sso-02.linkshare.com
+D, [2015-04-21T22:51:46.437588 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:51:46.437691 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:51:46.437794 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:51:46.437898 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:51:46.438000 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:51:46.438102 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+I, [2015-04-21T22:51:49.020930 #19507]  INFO -- : status: Net::HTTPFound 1.1 302 Found
+D, [2015-04-21T22:51:49.021204 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:51:46 GMT
+D, [2015-04-21T22:51:49.021299 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:51:49.021386 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:51:49.021472 #19507] DEBUG -- : response-header: set-cookie => PHPSESSID=e9c33bbb274a2d3869481bdb2e7a5226; path=/, PHPSESSID=ST-391722-SWAevdwGvx4mF3rRCu5G-sso-02linksharecom; path=/
+D, [2015-04-21T22:51:49.021564 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:51:49.021659 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:51:49.021751 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:51:49.021843 #19507] DEBUG -- : response-header: location => http://cli.linksynergy.com/cli/publisher/home.php
+D, [2015-04-21T22:51:49.021956 #19507] DEBUG -- : response-header: cneonction => close
+D, [2015-04-21T22:51:49.022044 #19507] DEBUG -- : response-header: transfer-encoding => chunked
+D, [2015-04-21T22:51:49.022132 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:51:49.024492 #19507] DEBUG -- : saved cookie: PHPSESSID=e9c33bbb274a2d3869481bdb2e7a5226
+D, [2015-04-21T22:51:49.025094 #19507] DEBUG -- : saved cookie: PHPSESSID=ST-391722-SWAevdwGvx4mF3rRCu5G-sso-02linksharecom
+I, [2015-04-21T22:51:49.025304 #19507]  INFO -- : follow redirect to: http://cli.linksynergy.com/cli/publisher/home.php
+I, [2015-04-21T22:51:49.028748 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/home.php
+D, [2015-04-21T22:51:49.029013 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:51:49.029109 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:51:49.029203 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:51:49.029294 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:51:49.029385 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:51:49.029476 #19507] DEBUG -- : request-header: cookie => PHPSESSID=ST-391722-SWAevdwGvx4mF3rRCu5G-sso-02linksharecom
+D, [2015-04-21T22:51:49.029566 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+I, [2015-04-21T22:51:49.117183 #19507]  INFO -- : status: Net::HTTPFound 1.1 302 Found
+D, [2015-04-21T22:51:49.117436 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:51:48 GMT
+D, [2015-04-21T22:51:49.117528 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:51:49.117617 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:51:49.117712 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:51:49.117803 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:51:49.117892 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:51:49.117992 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:51:48 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=u3gAUVBz9dZouKB51B3XKr6LiO6lX3a0; path=/, lsid=7001188412; expires=Wed, 22-Apr-2015 04:51:48 GMT; path=/; domain=.cli.linksynergy.com, langpref=deleted; expires=Tue, 22-Apr-2014 03:51:47 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, tids_on=deleted; expires=Tue, 22-Apr-2014 03:51:47 GMT; path=/; domain=.linksynergy.com, currentSid=2914261; expires=Wed, 22-Apr-2015 04:51:48 GMT; path=/; domain=.cli.linksynergy.com, linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0HIaI5TTQLOikna6YWAWvHAmJacSXp7kfh5ZHKhAyJwBjRdYClOPMIynd0AgaRz%2FXbvYRPsLu7zaZ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; path=/cli/; domain=linksynergy.com, linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0HIaI5TTQLOikna6YWAWvHAmJacSXp7kfh5ZHKhAyJwBjRdYClOPMIynd0AgaRz%2FXbvYRPsLu7zaZ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; path=/cli/; domain=linksynergy.com
+D, [2015-04-21T22:51:49.118117 #19507] DEBUG -- : response-header: ls_auth => C
+D, [2015-04-21T22:51:49.118206 #19507] DEBUG -- : response-header: ls_id => 7001188412
+D, [2015-04-21T22:51:49.118343 #19507] DEBUG -- : response-header: location => /cli/publisher/home.php?eid=V8uMkWlCTes&lsnoid=NONE
+D, [2015-04-21T22:51:49.118433 #19507] DEBUG -- : response-header: content-length => 0
+D, [2015-04-21T22:51:49.118521 #19507] DEBUG -- : response-header: cneonction => close
+D, [2015-04-21T22:51:49.118610 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:51:49.118899 #19507] DEBUG -- : Read 0 bytes (0 total)
+D, [2015-04-21T22:51:49.120612 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:51:49.121183 #19507] DEBUG -- : saved cookie: PHPSESSID=u3gAUVBz9dZouKB51B3XKr6LiO6lX3a0
+D, [2015-04-21T22:51:49.122200 #19507] DEBUG -- : saved cookie: lsid=7001188412
+D, [2015-04-21T22:51:49.123341 #19507] DEBUG -- : saved cookie: langpref=deleted
+D, [2015-04-21T22:51:49.123846 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:51:49.124893 #19507] DEBUG -- : saved cookie: tids_on=deleted
+D, [2015-04-21T22:51:49.127331 #19507] DEBUG -- : saved cookie: currentSid=2914261
+D, [2015-04-21T22:51:49.128296 #19507] DEBUG -- : saved cookie: linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0HIaI5TTQLOikna6YWAWvHAmJacSXp7kfh5ZHKhAyJwBjRdYClOPMIynd0AgaRz%2FXbvYRPsLu7zaZ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D
+D, [2015-04-21T22:51:49.129195 #19507] DEBUG -- : saved cookie: linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0HIaI5TTQLOikna6YWAWvHAmJacSXp7kfh5ZHKhAyJwBjRdYClOPMIynd0AgaRz%2FXbvYRPsLu7zaZ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D
+I, [2015-04-21T22:51:49.129511 #19507]  INFO -- : follow redirect to: /cli/publisher/home.php?eid=V8uMkWlCTes&lsnoid=NONE
+I, [2015-04-21T22:51:49.136106 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/home.php?eid=V8uMkWlCTes&lsnoid=NONE
+D, [2015-04-21T22:51:49.136334 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:51:49.136430 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:51:49.136522 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:51:49.136613 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:51:49.136706 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:51:49.136798 #19507] DEBUG -- : request-header: cookie => PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; currentSid=2914261; linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0HIaI5TTQLOikna6YWAWvHAmJacSXp7kfh5ZHKhAyJwBjRdYClOPMIynd0AgaRz%2FXbvYRPsLu7zaZ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; lsid=7001188412
+D, [2015-04-21T22:51:49.136888 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+I, [2015-04-21T22:51:51.042360 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:51:51.042670 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:51:48 GMT
+D, [2015-04-21T22:51:51.042766 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:51:51.042854 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:51:51.042961 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:51:51.043071 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:51:51.043177 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:51:51.043288 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:51:48 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, welcomeCookie=D; expires=Sun, 03-May-2015 17:38:27 GMT; path=/, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/
+D, [2015-04-21T22:51:51.043386 #19507] DEBUG -- : response-header: ls_auth => C
+D, [2015-04-21T22:51:51.043475 #19507] DEBUG -- : response-header: ls_id => 2914261
+D, [2015-04-21T22:51:51.043564 #19507] DEBUG -- : response-header: cont_prof_id => 7001188412
+D, [2015-04-21T22:51:51.043652 #19507] DEBUG -- : response-header: cneonction => close
+D, [2015-04-21T22:51:51.043742 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:51:51.043832 #19507] DEBUG -- : response-header: content-encoding => gzip
+D, [2015-04-21T22:51:51.043940 #19507] DEBUG -- : response-header: transfer-encoding => chunked
+D, [2015-04-21T22:51:51.044315 #19507] DEBUG -- : Read 4010 bytes (4010 total)
+D, [2015-04-21T22:51:51.044489 #19507] DEBUG -- : Read 2424 bytes (6434 total)
+D, [2015-04-21T22:51:51.081863 #19507] DEBUG -- : Read 2585 bytes (9019 total)
+D, [2015-04-21T22:51:51.082352 #19507] DEBUG -- : gzip response
+D, [2015-04-21T22:51:51.097416 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:51:51.098004 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:51:51.098555 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:51:51.099091 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:51:51.099802 #19507] DEBUG -- : saved cookie: welcomeCookie=D
+D, [2015-04-21T22:51:51.100221 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+I, [2015-04-21T22:51:51.486523 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/programs/advertisers.php?my_programs=1
+D, [2015-04-21T22:51:51.486697 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:51:51.487059 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:51:51.487184 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:51:51.487235 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:51:51.487282 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:51:51.487329 #19507] DEBUG -- : request-header: cookie => PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; currentSid=2914261; langpref=en; linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0HIaI5TTQLOikna6YWAWvHAmJacSXp7kfh5ZHKhAyJwBjRdYClOPMIynd0AgaRz%2FXbvYRPsLu7zaZ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; lsid=7001188412; welcomeCookie=D
+D, [2015-04-21T22:51:51.487376 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+D, [2015-04-21T22:51:51.487451 #19507] DEBUG -- : request-header: referer => http://cli.linksynergy.com/cli/publisher/home.php?eid=V8uMkWlCTes&lsnoid=NONE
+I, [2015-04-21T22:51:54.029726 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:51:54.030033 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:51:51 GMT
+D, [2015-04-21T22:51:54.030138 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:51:54.030301 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:51:54.030410 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:51:54.030557 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:51:54.030664 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:51:54.030774 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:51:51 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/
+D, [2015-04-21T22:51:54.030872 #19507] DEBUG -- : response-header: ls_auth => C
+D, [2015-04-21T22:51:54.030978 #19507] DEBUG -- : response-header: ls_id => 2914261
+D, [2015-04-21T22:51:54.031081 #19507] DEBUG -- : response-header: cont_prof_id => 7001188412
+D, [2015-04-21T22:51:54.031173 #19507] DEBUG -- : response-header: cneonction => close
+D, [2015-04-21T22:51:54.031266 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:51:54.031357 #19507] DEBUG -- : response-header: content-encoding => gzip
+D, [2015-04-21T22:51:54.031451 #19507] DEBUG -- : response-header: transfer-encoding => chunked
+D, [2015-04-21T22:51:54.031818 #19507] DEBUG -- : Read 4150 bytes (4150 total)
+D, [2015-04-21T22:51:54.032020 #19507] DEBUG -- : Read 2424 bytes (6574 total)
+D, [2015-04-21T22:51:54.068220 #19507] DEBUG -- : Read 3636 bytes (10210 total)
+D, [2015-04-21T22:51:54.069570 #19507] DEBUG -- : Read 1212 bytes (11422 total)
+D, [2015-04-21T22:51:54.112697 #19507] DEBUG -- : Read 596 bytes (12018 total)
+D, [2015-04-21T22:51:54.113042 #19507] DEBUG -- : Read 4244 bytes (16262 total)
+D, [2015-04-21T22:51:54.113726 #19507] DEBUG -- : Read 1212 bytes (17474 total)
+D, [2015-04-21T22:51:54.527607 #19507] DEBUG -- : Read 137 bytes (17611 total)
+D, [2015-04-21T22:51:54.527996 #19507] DEBUG -- : Read 3491 bytes (21102 total)
+D, [2015-04-21T22:51:54.736957 #19507] DEBUG -- : Read 753 bytes (21855 total)
+D, [2015-04-21T22:51:54.737330 #19507] DEBUG -- : Read 2875 bytes (24730 total)
+D, [2015-04-21T22:51:54.738082 #19507] DEBUG -- : Read 1212 bytes (25942 total)
+D, [2015-04-21T22:51:54.747681 #19507] DEBUG -- : Read 134 bytes (26076 total)
+D, [2015-04-21T22:51:54.747948 #19507] DEBUG -- : Read 2097 bytes (28173 total)
+D, [2015-04-21T22:51:54.748395 #19507] DEBUG -- : gzip response
+D, [2015-04-21T22:51:54.822377 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:51:54.823053 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:51:54.823496 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:51:54.823903 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+I, [2015-04-21T22:51:54.918844 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/programs/consolidatedAdvertiserReport.php
+D, [2015-04-21T22:51:54.919075 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:51:54.919319 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:51:54.919423 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:51:54.919519 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:51:54.919613 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:51:54.919708 #19507] DEBUG -- : request-header: cookie => PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; currentSid=2914261; langpref=en; linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0HIaI5TTQLOikna6YWAWvHAmJacSXp7kfh5ZHKhAyJwBjRdYClOPMIynd0AgaRz%2FXbvYRPsLu7zaZ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; lsid=7001188412; welcomeCookie=D
+D, [2015-04-21T22:51:54.919802 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+D, [2015-04-21T22:51:54.919916 #19507] DEBUG -- : request-header: referer => http://cli.linksynergy.com/cli/publisher/programs/advertisers.php?my_programs=1
+I, [2015-04-21T22:51:57.362620 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:51:57.362937 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:51:54 GMT
+D, [2015-04-21T22:51:57.363038 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:51:57.363128 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:51:57.363218 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:51:57.363368 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:51:57.363473 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:51:57.363581 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:51:54 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/
+D, [2015-04-21T22:51:57.363678 #19507] DEBUG -- : response-header: ls_auth => C
+D, [2015-04-21T22:51:57.363809 #19507] DEBUG -- : response-header: ls_id => 2914261
+D, [2015-04-21T22:51:57.363907 #19507] DEBUG -- : response-header: cont_prof_id => 7001188412
+D, [2015-04-21T22:51:57.363999 #19507] DEBUG -- : response-header: cneonction => close
+D, [2015-04-21T22:51:57.364091 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:51:57.364184 #19507] DEBUG -- : response-header: content-encoding => gzip
+D, [2015-04-21T22:51:57.364277 #19507] DEBUG -- : response-header: transfer-encoding => chunked
+D, [2015-04-21T22:51:57.364574 #19507] DEBUG -- : Read 4150 bytes (4150 total)
+D, [2015-04-21T22:51:57.364763 #19507] DEBUG -- : Read 2424 bytes (6574 total)
+D, [2015-04-21T22:51:57.400306 #19507] DEBUG -- : Read 4251 bytes (10825 total)
+D, [2015-04-21T22:51:57.400585 #19507] DEBUG -- : Read 589 bytes (11414 total)
+D, [2015-04-21T22:51:57.401326 #19507] DEBUG -- : Read 2424 bytes (13838 total)
+D, [2015-04-21T22:51:57.402727 #19507] DEBUG -- : Read 628 bytes (14466 total)
+D, [2015-04-21T22:51:57.403119 #19507] DEBUG -- : gzip response
+D, [2015-04-21T22:51:57.426024 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:51:57.426701 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:51:57.427141 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:51:57.427547 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+I, [2015-04-21T22:51:57.586556 #19507]  INFO -- : Net::HTTP::Get: /cli/publisher/programs/carDownload.php?id=3050
+D, [2015-04-21T22:51:57.586717 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:51:57.586768 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:51:57.586816 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:51:57.586866 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:51:57.586918 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:51:57.586968 #19507] DEBUG -- : request-header: cookie => PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; currentSid=2914261; langpref=en; linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0HIaI5TTQLOikna6YWAWvHAmJacSXp7kfh5ZHKhAyJwBjRdYClOPMIynd0AgaRz%2FXbvYRPsLu7zaZ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; lsid=7001188412; welcomeCookie=D
+D, [2015-04-21T22:51:57.587018 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+D, [2015-04-21T22:51:57.587075 #19507] DEBUG -- : request-header: referer => http://cli.linksynergy.com/cli/publisher/programs/consolidatedAdvertiserReport.php
+I, [2015-04-21T22:51:58.153207 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:51:58.153499 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:51:57 GMT
+D, [2015-04-21T22:51:58.153602 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:51:58.153693 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:51:58.153790 #19507] DEBUG -- : response-header: expires => Wed, 22 Apr 2015 03:52:02 GMT
+D, [2015-04-21T22:51:58.153885 #19507] DEBUG -- : response-header: cache-control => must-revalidate, post-check=0, pre-check=0, max-age=0
+D, [2015-04-21T22:51:58.153980 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:51:58.154077 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:51:57 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/
+D, [2015-04-21T22:51:58.154209 #19507] DEBUG -- : response-header: ls_auth => C
+D, [2015-04-21T22:51:58.154353 #19507] DEBUG -- : response-header: ls_id => 2914261
+D, [2015-04-21T22:51:58.154446 #19507] DEBUG -- : response-header: cont_prof_id => 7001188412
+D, [2015-04-21T22:51:58.154540 #19507] DEBUG -- : response-header: content-disposition => attachment; filename="caReport.csv"
+D, [2015-04-21T22:51:58.154632 #19507] DEBUG -- : response-header: nncoection => close
+D, [2015-04-21T22:51:58.154724 #19507] DEBUG -- : response-header: transfer-encoding => chunked
+D, [2015-04-21T22:51:58.154818 #19507] DEBUG -- : response-header: content-type => application/vnd.ms-excel; charset=UTF-8
+D, [2015-04-21T22:51:58.155153 #19507] DEBUG -- : Read 1750 bytes (1750 total)
+D, [2015-04-21T22:51:58.196160 #19507] DEBUG -- : Read 2424 bytes (4174 total)
+D, [2015-04-21T22:51:58.224766 #19507] DEBUG -- : Read 2424 bytes (6598 total)
+D, [2015-04-21T22:51:58.237825 #19507] DEBUG -- : Read 1417 bytes (8015 total)
+D, [2015-04-21T22:51:59.097870 #19507] DEBUG -- : Read 3630 bytes (11645 total)
+D, [2015-04-21T22:51:59.142003 #19507] DEBUG -- : Read 3636 bytes (15281 total)
+D, [2015-04-21T22:51:59.148862 #19507] DEBUG -- : Read 1276 bytes (16557 total)
+D, [2015-04-21T22:51:59.728180 #19507] DEBUG -- : Read 3630 bytes (20187 total)
+D, [2015-04-21T22:51:59.770406 #19507] DEBUG -- : Read 3636 bytes (23823 total)
+D, [2015-04-21T22:51:59.776551 #19507] DEBUG -- : Read 944 bytes (24767 total)
+D, [2015-04-21T22:52:00.305068 #19507] DEBUG -- : Read 3630 bytes (28397 total)
+D, [2015-04-21T22:52:00.347064 #19507] DEBUG -- : Read 4659 bytes (33056 total)
+D, [2015-04-21T22:52:00.986408 #19507] DEBUG -- : Read 3630 bytes (36686 total)
+D, [2015-04-21T22:52:01.031858 #19507] DEBUG -- : Read 4848 bytes (41534 total)
+D, [2015-04-21T22:52:01.032764 #19507] DEBUG -- : Read 142 bytes (41676 total)
+D, [2015-04-21T22:52:01.568756 #19507] DEBUG -- : Read 3630 bytes (45306 total)
+D, [2015-04-21T22:52:01.611203 #19507] DEBUG -- : Read 2424 bytes (47730 total)
+D, [2015-04-21T22:52:01.618100 #19507] DEBUG -- : Read 2161 bytes (49891 total)
+D, [2015-04-21T22:52:02.593592 #19507] DEBUG -- : Read 3630 bytes (53521 total)
+D, [2015-04-21T22:52:02.636957 #19507] DEBUG -- : Read 2424 bytes (55945 total)
+D, [2015-04-21T22:52:02.642819 #19507] DEBUG -- : Read 3159 bytes (59104 total)
+D, [2015-04-21T22:52:03.158654 #19507] DEBUG -- : Read 3630 bytes (62734 total)
+D, [2015-04-21T22:52:03.200838 #19507] DEBUG -- : Read 2424 bytes (65158 total)
+D, [2015-04-21T22:52:03.209312 #19507] DEBUG -- : Read 2589 bytes (67747 total)
+D, [2015-04-21T22:52:03.723583 #19507] DEBUG -- : Read 4842 bytes (72589 total)
+D, [2015-04-21T22:52:03.765099 #19507] DEBUG -- : Read 2424 bytes (75013 total)
+D, [2015-04-21T22:52:03.766122 #19507] DEBUG -- : Read 985 bytes (75998 total)
+D, [2015-04-21T22:52:04.229431 #19507] DEBUG -- : Read 2418 bytes (78416 total)
+D, [2015-04-21T22:52:04.230492 #19507] DEBUG -- : Read 2424 bytes (80840 total)
+D, [2015-04-21T22:52:04.272979 #19507] DEBUG -- : Read 3905 bytes (84745 total)
+D, [2015-04-21T22:52:04.850286 #19507] DEBUG -- : Read 2418 bytes (87163 total)
+D, [2015-04-21T22:52:04.851289 #19507] DEBUG -- : Read 1212 bytes (88375 total)
+D, [2015-04-21T22:52:04.891426 #19507] DEBUG -- : Read 2424 bytes (90799 total)
+D, [2015-04-21T22:52:04.898679 #19507] DEBUG -- : Read 2467 bytes (93266 total)
+D, [2015-04-21T22:52:06.595020 #19507] DEBUG -- : Read 3630 bytes (96896 total)
+D, [2015-04-21T22:52:06.636994 #19507] DEBUG -- : Read 3636 bytes (100532 total)
+D, [2015-04-21T22:52:06.647366 #19507] DEBUG -- : Read 2424 bytes (102956 total)
+D, [2015-04-21T22:52:06.677208 #19507] DEBUG -- : Read 1673 bytes (104629 total)
+D, [2015-04-21T22:52:07.232147 #19507] DEBUG -- : Read 4842 bytes (109471 total)
+D, [2015-04-21T22:52:07.273087 #19507] DEBUG -- : Read 3436 bytes (112907 total)
+D, [2015-04-21T22:52:07.861169 #19507] DEBUG -- : Read 4842 bytes (117749 total)
+D, [2015-04-21T22:52:07.902583 #19507] DEBUG -- : Read 2424 bytes (120173 total)
+D, [2015-04-21T22:52:07.905375 #19507] DEBUG -- : Read 1452 bytes (121625 total)
+D, [2015-04-21T22:52:08.368236 #19507] DEBUG -- : Read 3630 bytes (125255 total)
+D, [2015-04-21T22:52:08.424671 #19507] DEBUG -- : Read 4479 bytes (129734 total)
+D, [2015-04-21T22:52:08.914597 #19507] DEBUG -- : Read 3630 bytes (133364 total)
+D, [2015-04-21T22:52:08.955783 #19507] DEBUG -- : Read 4818 bytes (138182 total)
+D, [2015-04-21T22:52:09.489202 #19507] DEBUG -- : Read 3630 bytes (141812 total)
+D, [2015-04-21T22:52:09.530585 #19507] DEBUG -- : Read 3636 bytes (145448 total)
+D, [2015-04-21T22:52:09.543019 #19507] DEBUG -- : Read 1537 bytes (146985 total)
+D, [2015-04-21T22:52:10.044446 #19507] DEBUG -- : Read 3630 bytes (150615 total)
+D, [2015-04-21T22:52:10.085380 #19507] DEBUG -- : Read 2424 bytes (153039 total)
+D, [2015-04-21T22:52:10.092559 #19507] DEBUG -- : Read 2080 bytes (155119 total)
+D, [2015-04-21T22:52:10.498553 #19507] DEBUG -- : Read 3630 bytes (158749 total)
+D, [2015-04-21T22:52:10.541757 #19507] DEBUG -- : Read 2424 bytes (161173 total)
+D, [2015-04-21T22:52:10.549367 #19507] DEBUG -- : Read 1974 bytes (163147 total)
+D, [2015-04-21T22:52:11.382921 #19507] DEBUG -- : Read 3630 bytes (166777 total)
+D, [2015-04-21T22:52:11.426063 #19507] DEBUG -- : Read 2424 bytes (169201 total)
+D, [2015-04-21T22:52:11.427397 #19507] DEBUG -- : Read 1212 bytes (170413 total)
+D, [2015-04-21T22:52:11.435413 #19507] DEBUG -- : Read 1563 bytes (171976 total)
+D, [2015-04-21T22:52:11.826875 #19507] DEBUG -- : Read 3630 bytes (175606 total)
+D, [2015-04-21T22:52:11.867416 #19507] DEBUG -- : Read 3636 bytes (179242 total)
+D, [2015-04-21T22:52:11.881111 #19507] DEBUG -- : Read 928 bytes (180170 total)
+D, [2015-04-21T22:52:12.260026 #19507] DEBUG -- : Read 1206 bytes (181376 total)
+D, [2015-04-21T22:52:12.260939 #19507] DEBUG -- : Read 2424 bytes (183800 total)
+D, [2015-04-21T22:52:12.302619 #19507] DEBUG -- : Read 4848 bytes (188648 total)
+D, [2015-04-21T22:52:12.303525 #19507] DEBUG -- : Read 416 bytes (189064 total)
+D, [2015-04-21T22:52:13.281120 #19507] DEBUG -- : Read 3630 bytes (192694 total)
+D, [2015-04-21T22:52:13.326543 #19507] DEBUG -- : Read 3636 bytes (196330 total)
+D, [2015-04-21T22:52:13.332335 #19507] DEBUG -- : Read 1276 bytes (197606 total)
+D, [2015-04-21T22:52:13.749152 #19507] DEBUG -- : Read 2418 bytes (200024 total)
+D, [2015-04-21T22:52:13.750391 #19507] DEBUG -- : Read 1212 bytes (201236 total)
+D, [2015-04-21T22:52:13.789609 #19507] DEBUG -- : Read 2424 bytes (203660 total)
+D, [2015-04-21T22:52:13.798153 #19507] DEBUG -- : Read 2852 bytes (206512 total)
+D, [2015-04-21T22:52:14.168380 #19507] DEBUG -- : Read 3630 bytes (210142 total)
+D, [2015-04-21T22:52:14.209383 #19507] DEBUG -- : Read 2424 bytes (212566 total)
+D, [2015-04-21T22:52:14.210437 #19507] DEBUG -- : Read 1212 bytes (213778 total)
+D, [2015-04-21T22:52:14.252636 #19507] DEBUG -- : Read 978 bytes (214756 total)
+D, [2015-04-21T22:52:15.024217 #19507] DEBUG -- : Read 3630 bytes (218386 total)
+D, [2015-04-21T22:52:15.065787 #19507] DEBUG -- : Read 3636 bytes (222022 total)
+D, [2015-04-21T22:52:15.075539 #19507] DEBUG -- : Read 1595 bytes (223617 total)
+D, [2015-04-21T22:52:15.147534 #19507] DEBUG -- : Read 2709 bytes (226326 total)
+D, [2015-04-21T22:52:15.308506 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:52:15.309238 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:52:15.309702 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+I, [2015-04-21T22:52:15.317571 #19507]  INFO -- : Net::HTTP::Get: /cli/common/logout.php
+D, [2015-04-21T22:52:15.317822 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:52:15.317926 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:52:15.318025 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:52:15.318124 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:52:15.318311 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:52:15.318417 #19507] DEBUG -- : request-header: cookie => PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; currentSid=2914261; langpref=en; linksynergyCLI=gEVx8UhuXMXCXGgQYs6Irqp2cE%2FCVFbjMWUrMkRdJ0HIaI5TTQLOikna6YWAWvHAmJacSXp7kfh5ZHKhAyJwBjRdYClOPMIynd0AgaRz%2FXbvYRPsLu7zaZ1PdXeMGVycsW7z47kgkNKFsI6nbqoZTRcezcLsmB6Bmvni47NDCO5Gl2YbEgkgYwUSL655FGb%2FXb9hhaEkJOxKX4ApMIPz%2BmeAB7BrJ56uRVsyhhc%2B4rwouN5aIjV819i2oZ%2Bd4u9pxaoYnds%2Brv51bY779%2BK755PWkbE4eKo%2FIPdImxl4GyQacVvN%2B1OXfVz5g19LGyiBKatFpI8NQYyiu0qzZb2yl5Y6OIKhEtcWmieNWMPEiZPoelFVzCC%2BwnUOlz4R39RNlsGKA8fX9ZnAKvdBcNQuFEiH18%2F5svLM%2FSwWOHS4d%2BScraUkHD%2FVGh%2Bei6DqXcAagpXY2MZy0AkL0%2Bp7NxhsytP%2BJz9HaeJZ4ZEaTqlDv4syRy6sjiUOHypra104gEJxoJKIwsI8%2Butb4riewaYlRg%3D%3D; lsid=7001188412; welcomeCookie=D
+D, [2015-04-21T22:52:15.318517 #19507] DEBUG -- : request-header: host => cli.linksynergy.com
+D, [2015-04-21T22:52:15.318649 #19507] DEBUG -- : request-header: referer => http://cli.linksynergy.com/cli/publisher/programs/consolidatedAdvertiserReport.php
+I, [2015-04-21T22:52:16.150170 #19507]  INFO -- : status: Net::HTTPFound 1.1 302 Found
+D, [2015-04-21T22:52:16.150511 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:52:15 GMT
+D, [2015-04-21T22:52:16.150616 #19507] DEBUG -- : response-header: server => Apache
+D, [2015-04-21T22:52:16.150707 #19507] DEBUG -- : response-header: x-powered-by => PHP/5.2.6
+D, [2015-04-21T22:52:16.150798 #19507] DEBUG -- : response-header: cache-control => no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+D, [2015-04-21T22:52:16.150893 #19507] DEBUG -- : response-header: expires => Thu, 19 Nov 1981 08:52:00 GMT
+D, [2015-04-21T22:52:16.150985 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:52:16.151086 #19507] DEBUG -- : response-header: set-cookie => langpref=en; expires=Wed, 22-Apr-2015 04:52:15 GMT; path=/; domain=.cli.linksynergy.com, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL; path=/, linksynergyCLI=deleted; expires=Tue, 22-Apr-2014 03:52:14 GMT; path=/cli/; domain=linksynergy.com, lsid=deleted; expires=Tue, 22-Apr-2014 03:52:14 GMT; path=/; domain=.cli.linksynergy.com, langpref=deleted; expires=Tue, 22-Apr-2014 03:52:14 GMT; path=/; domain=.cli.linksynergy.com, currentSid=deleted; expires=Tue, 22-Apr-2014 03:52:14 GMT; path=/; domain=.cli.linksynergy.com
+D, [2015-04-21T22:52:16.151182 #19507] DEBUG -- : response-header: location => https://login.linkshare.com/sso/logout?service=http%3A%2F%2Fcli.linksynergy.com%2Fcli%2Fpublisher%2Fhome.php
+D, [2015-04-21T22:52:16.151276 #19507] DEBUG -- : response-header: content-length => 452
+D, [2015-04-21T22:52:16.151370 #19507] DEBUG -- : response-header: nncoection => close
+D, [2015-04-21T22:52:16.151465 #19507] DEBUG -- : response-header: content-type => text/html; charset=UTF-8
+D, [2015-04-21T22:52:16.151780 #19507] DEBUG -- : Read 452 bytes (452 total)
+D, [2015-04-21T22:52:16.154564 #19507] DEBUG -- : saved cookie: langpref=en
+D, [2015-04-21T22:52:16.155189 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:52:16.155639 #19507] DEBUG -- : saved cookie: PHPSESSID=om3jxsMIheUrk6EoOqz92s383uBLnzCL
+D, [2015-04-21T22:52:16.156738 #19507] DEBUG -- : saved cookie: linksynergyCLI=deleted
+D, [2015-04-21T22:52:16.157885 #19507] DEBUG -- : saved cookie: lsid=deleted
+D, [2015-04-21T22:52:16.159078 #19507] DEBUG -- : saved cookie: langpref=deleted
+D, [2015-04-21T22:52:16.160183 #19507] DEBUG -- : saved cookie: currentSid=deleted
+I, [2015-04-21T22:52:16.160471 #19507]  INFO -- : follow redirect to: https://login.linkshare.com/sso/logout?service=http%3A%2F%2Fcli.linksynergy.com%2Fcli%2Fpublisher%2Fhome.php
+I, [2015-04-21T22:52:16.164458 #19507]  INFO -- : Net::HTTP::Get: /sso/logout?service=http%3A%2F%2Fcli.linksynergy.com%2Fcli%2Fpublisher%2Fhome.php
+D, [2015-04-21T22:52:16.164694 #19507] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-04-21T22:52:16.164835 #19507] DEBUG -- : request-header: accept => */*
+D, [2015-04-21T22:52:16.164930 #19507] DEBUG -- : request-header: user-agent => Mechanize/2.7.2 Ruby/2.0.0p598 (http://github.com/sparklemotion/mechanize/)
+D, [2015-04-21T22:52:16.165026 #19507] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-04-21T22:52:16.165119 #19507] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-04-21T22:52:16.165213 #19507] DEBUG -- : request-header: cookie => CASTGC=TGT-333558-RsogfSA6A2GEJqioPXDXCUCAcUYnQEG2F1b9LEziosg47vNIfo-sso-02.linkshare.com; JSESSIONID=D93499727255B696C0891BD4A68FB20F
+D, [2015-04-21T22:52:16.165306 #19507] DEBUG -- : request-header: host => login.linkshare.com
+D, [2015-04-21T22:52:16.165419 #19507] DEBUG -- : request-header: referer => http://cli.linksynergy.com/cli/publisher/programs/consolidatedAdvertiserReport.php
+I, [2015-04-21T22:52:19.104749 #19507]  INFO -- : status: Net::HTTPOK 1.1 200 OK
+D, [2015-04-21T22:52:19.105044 #19507] DEBUG -- : response-header: server => Apache-Coyote/1.1
+D, [2015-04-21T22:52:19.105145 #19507] DEBUG -- : response-header: pragma => no-cache
+D, [2015-04-21T22:52:19.105246 #19507] DEBUG -- : response-header: expires => Thu, 01 Jan 1970 00:00:00 GMT
+D, [2015-04-21T22:52:19.105340 #19507] DEBUG -- : response-header: cache-control => no-cache, no-store
+D, [2015-04-21T22:52:19.105437 #19507] DEBUG -- : response-header: set-cookie => CASTGC=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/sso/, CASPRIVACY=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/sso/
+D, [2015-04-21T22:52:19.105532 #19507] DEBUG -- : response-header: content-type => text/html;charset=UTF-8
+D, [2015-04-21T22:52:19.105621 #19507] DEBUG -- : response-header: content-language => en-US
+D, [2015-04-21T22:52:19.105716 #19507] DEBUG -- : response-header: ntcoent-length => 3274
+D, [2015-04-21T22:52:19.105808 #19507] DEBUG -- : response-header: date => Wed, 22 Apr 2015 03:52:18 GMT
+D, [2015-04-21T22:52:19.105896 #19507] DEBUG -- : response-header: content-encoding => gzip
+D, [2015-04-21T22:52:19.105988 #19507] DEBUG -- : response-header: content-length => 1437
+D, [2015-04-21T22:52:19.106309 #19507] DEBUG -- : Read 1437 bytes (1437 total)
+D, [2015-04-21T22:52:19.106639 #19507] DEBUG -- : gzip response
+D, [2015-04-21T22:52:19.109862 #19507] DEBUG -- : saved cookie: CASTGC=
+D, [2015-04-21T22:52:19.110868 #19507] DEBUG -- : saved cookie: CASPRIVACY=

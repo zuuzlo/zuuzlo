@@ -59,7 +59,7 @@ class CouponsController < ApplicationController
 
   def coupon_link
     coupon = Coupon.find_by_id(params[:id])
-    if logged_in?
+    if user_signed_in?
       if coupon.coupon_source_id == 1
         link = coupon.link + "&u1=" + current_user.cashback_id
       else

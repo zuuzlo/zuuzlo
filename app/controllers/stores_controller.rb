@@ -2,17 +2,20 @@ class StoresController < ApplicationController
   include LoadCoupons
   include LoadSeo
 
-  before_filter :require_user, only:[:save_store, :remove_store]
+  before_filter :authenticate_user!, only:[:save_store, :remove_store]
 
   def index
     @stores = Store.friendly.to_a
     featured = Store.with_coupons.collect(&:id).sample(12)
     @stores_featured = Store.find(featured)
 
+    @store_array = @stores.map(&:name)
+=begin
     @store_array = []
     @stores.each do | store |
       @store_array << store.name
     end
+=end
     render layout: 'store_index'
   end
 

@@ -1,11 +1,13 @@
 Zuuzlo::Application.routes.draw do
   
-  root to: 'static_pages#front'
+  devise_for :users
+  
+  root to: 'stores#index'
 
   get 'ui(/:action)', controller: 'ui'
   
-  resources :users, only: [:new, :create, :show]
-  get 'register/:token', to: "users#register_confirmation", as: 'register_with_token'
+  resources :users, only: [:show]
+
   
   resources :stores, except: [:destory] do
     member do 

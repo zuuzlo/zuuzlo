@@ -2,7 +2,7 @@ module LoadSeo
   extend ActiveSupport::Concern
 
   def seo_description(coupons, category)
-    if logged_in?
+    if user_signed_in?
       "checking"
     else
       if category
@@ -19,7 +19,7 @@ module LoadSeo
   end
 
   def seo_keywords(coupons, category)
-    if logged_in?
+    if user_signed_in?
       "kohls, kohls coupons"
     else
       if category
