@@ -154,7 +154,7 @@ class LsTransactions
     avertisers_page = home_page.link_with(text: 'My Advertisers').click
     report_page = avertisers_page.link_with(text: "\n                    Consolidated Advertiser Report").click
     file_link = report_page.link_with(text: "\n                    Export to .csv" ).click
-    file_link.save("#{Rails.root}/store.csv")
+    file_link.save!("#{Rails.root}/store.csv")
     logout_page = report_page.link_with(text: "Logout").click
   end
 

@@ -32,6 +32,12 @@ Zuuzlo::Application.routes.draw do
       get 'tab_offers'
     end
   end
+
+  namespace :admin do
+    resources :stores, only: [:index]
+    get 'get_ls_stores', to: 'stores#get_ls_stores'
+    get 'get_pj_stores', to: 'stores#get_pj_stores'
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

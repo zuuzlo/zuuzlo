@@ -1,5 +1,5 @@
 def set_current_user(user=nil)
-  session[:user_id] = (user || Fabricate(:user, verified_email: TRUE)).id
+  sign_in (user || Fabricate(:user))
 end
 
 def current_user
@@ -8,4 +8,11 @@ end
 
 def clear_current_user
   session[:user_id] = nil
+end
+
+def set_admin_user(a_user=nil)
+  user = a_user || Fabricate(:user)
+  set_current_user(user)
+  user.admin = true
+  user.save
 end

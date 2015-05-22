@@ -1,0 +1,7 @@
+.page-header
+  %h1 Admin - Stores
+.row
+  .s3.l3
+    = button_to "Add New LS Stores", { action: "get_ls_stores" }, method: :get, class: "btn btn-success"
+  .s3.l3
+    = button_to "Add New PJ Stores", { action: "get_pj_stores" }, method: :get, class: "btn btn-success"
