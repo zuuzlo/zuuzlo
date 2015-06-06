@@ -1,5 +1,10 @@
 class Admin::StoresController < AdminController
 
+  def index
+    @store_count = Store.count
+    @stores = Store.all
+  end
+  
   def get_ls_stores
     count_start = Store.count
     LsTransactions.load_store_list

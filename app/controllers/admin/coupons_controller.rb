@@ -59,13 +59,27 @@ class Admin::CouponsController < AdminController
     @coupons = Coupon.order('end_date ASC').load
   end
 
-  def get_kohls_coupons
-    count_start = Coupon.count 
-    KohlsTransactions.kohls_update_coupons
+  def get_ls_coupons
+    count_start = Coupon.count
+    LsTransactions.ls_update_coupons
     count_finish = Coupon.count
     
     if count_finish > count_start
-      flash[:success] = "Kohls Coupons are updated, you imported #{count_finish - count_start} coupons."
+      flash[:success] = "LS Coupons are updated, you imported #{count_finish - count_start} coupons."
+    else
+      flash[:danger] = "No new coupons were imported"
+    end
+
+    redirect_to admin_coupons_path
+  end
+
+  def get_pj_coupons
+    count_start = Coupon.count
+    PjTransactions.pj_update_coupons
+    count_finish = Coupon.count
+    
+    if count_finish > count_start
+      flash[:success] = "PJ Coupons are updated, you imported #{count_finish - count_start} coupons."
     else
       flash[:danger] = "No new coupons were imported"
     end

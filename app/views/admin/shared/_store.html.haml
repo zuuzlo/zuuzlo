@@ -1,0 +1,18 @@
+- stores.each do | store |
+  - row_class = store.active_commission ? '' : 'danger'
+  %tr{ :class => row_class }
+    %td
+      = store.name
+    %td
+      = store.id_of_store
+    %td
+      = store.description
+    %td
+      = store.home_page_url
+    %td
+      = image_tag("#{store.store_img}", size: "40x40")
+    %td
+      = store.commission
+    %td
+      = #link_to "Edit", edit_admin_store_path(store)
+      = #link_to "Delete", admin_store_path(store), :method => :delete

@@ -1,0 +1,20 @@
+.page-header
+  %h1 Admin - Coupons
+.row
+  .s3.l3
+    = button_to "Add New LS Coupons", { action: "get_ls_coupons" }, method: :get, class: "btn btn-success"
+  .s3.l3
+    = button_to "Add New PJ Coupons", { action: "get_pj_coupons" }, method: :get, class: "btn btn-success"
+%h1
+  = @coupon_count
+  Total Coupons
+%table.table.table-condensed
+  %tr
+    %th Source
+    %th Title
+    %th Code
+    %th Store ID
+    %th Description
+    %th Link
+    %th End Date
+  = render partial: 'admin/shared/coupon', locals: { coupons: @coupons }
