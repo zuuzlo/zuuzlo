@@ -40,6 +40,7 @@ Zuuzlo::Application.routes.draw do
     resources :coupons, only: [:index]
     get 'get_ls_coupons', to: 'coupons#get_ls_coupons'
     get 'get_pj_coupons', to: 'coupons#get_pj_coupons'
+    get 'delete_coupons', to: 'coupons#delete_coupons'
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

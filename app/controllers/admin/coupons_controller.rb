@@ -87,7 +87,7 @@ class Admin::CouponsController < AdminController
     redirect_to admin_coupons_path
   end
 
-  def delete_kohls_coupons
+  def delete_coupons
     delete_coupons = []
     Coupon.all.each do | coupon |
       delete_coupons << coupon.id if coupon.end_date < Time.now
