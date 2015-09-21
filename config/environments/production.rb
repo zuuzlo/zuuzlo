@@ -79,5 +79,5 @@ Zuuzlo::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {domain: 'mg.zuuzlo.com'}
+  config.action_mailer.mailgun_settings = {domain: 'mg.zuuzlo.com', api_key: ENV[MAILGUN_API_KEY]}
 end
