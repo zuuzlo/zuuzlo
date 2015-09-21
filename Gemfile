@@ -37,6 +37,8 @@ gem 'unicorn', '~> 4.8.3'
 gem 'devise'
 gem 'devise-bootstrap-views'
 
+gem 'mailgunner'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
