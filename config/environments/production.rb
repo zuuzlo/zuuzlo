@@ -79,5 +79,6 @@ Zuuzlo::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.action_mailer.delivery_method = :mailgun
+  Rails.application.routes.default_url_options[:host] = 'test.zuuzlo.com'
   #config.action_mailer.mailgun_settings = {domain: 'mg.zuuzlo.com'}
 end
