@@ -82,5 +82,6 @@ Zuuzlo::Application.configure do
   config.action_mailer.mailgun_settings = {
     api_key: ENV['MAILGUN_API_KEY'],
     domain: 'mg.zuuzlo.com' }
+  Rails.application.routes.default_url_options[:host] = 'test.zuuzlo.com'
 
 end
