@@ -9,7 +9,7 @@
     %a.navbar-brand(href='#') ZUUZLO LLC
   .collapse.navbar-collapse.navbar-ex1-collapse 
     %ul.nav.navbar-nav
-      %li{:class => "#{'active' if current_page?(user_path(current_user))}"}=link_to "Home", user_url(current_user)
+      =#%li{:class => "#{'active' if current_page?(user_path(current_user))}"}=link_to "Home", user_url(current_user)
       %li{:class => "#{'active' if current_page?(stores_path)}"}=link_to "Stores", stores_url
       %li.dropdown
         %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")

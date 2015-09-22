@@ -151,7 +151,10 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mailgunner (2.2.1)
+    mailgun_rails (0.7.0)
+      actionmailer (>= 3.2.13)
+      json (>= 1.7.7)
+      rest-client (>= 1.6.7)
     masonry-rails (0.2.4)
       railties
     mechanize (2.7.2)
@@ -175,6 +178,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
+    netrc (0.10.3)
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
     ntlm-http (0.1.1)
@@ -212,6 +216,10 @@ GEM
     recursive-open-struct (0.5.0)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     roo (1.13.2)
       nokogiri
       rubyzip
@@ -337,7 +345,7 @@ DEPENDENCIES
   letter_opener
   linkshare_api (= 0.3.1)
   logger
-  mailgunner
+  mailgun_rails
   masonry-rails
   mechanize
   nokogiri
