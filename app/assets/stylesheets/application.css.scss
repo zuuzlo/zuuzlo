@@ -648,6 +648,16 @@ $container-lg-desktop:        ((1140px + $grid-gutter-width));
 @import "bootstrap-sprockets"; 
 @import 'bootstrap';
 
+// Import the fonts
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: asset-url('boostrap/glyphicons-halflings-regular.eot');
+  src: asset-url('bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       asset-url('bootstrap/glyphicons-halflings-regular.woff') format('woff'),
+       asset-url('bootstrap/glyphicons-halflings-regular.ttf') format('truetype'),
+       asset-url('bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
   
 .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
 .s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12,
