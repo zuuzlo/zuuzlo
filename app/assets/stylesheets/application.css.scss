@@ -22,6 +22,10 @@
 //    .s6.l5
 //      div style='background:yellow'
 //        ' yellow: full row on tiny devices, half screen on tablets and 5/12 on large screens
+
+@import "bootstrap-sprockets"; 
+@import 'bootstrap';
+
 //
 // Variables
 // --------------------------------------------------
@@ -643,11 +647,7 @@ $container-desktop:           ((940px + $grid-gutter-width));
 // Large screen / wide desktop
 $container-lg-desktop:        ((1140px + $grid-gutter-width));
 
- 
-@import "bootstrap-sprockets"; 
-@import 'bootstrap';
-
- 
+  
 .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
 .s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12,
 .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10, .l11, .l12 {
