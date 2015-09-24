@@ -23,8 +23,6 @@
 //      div style='background:yellow'
 //        ' yellow: full row on tiny devices, half screen on tablets and 5/12 on large screens
 
-@import "bootstrap-sprockets"; 
-@import 'bootstrap';
 
 //
 // Variables
@@ -679,6 +677,9 @@ $container-lg-desktop:        ((1140px + $grid-gutter-width));
     }
   }
 }
+
+@import "bootstrap-sprockets"; 
+@import 'bootstrap';
 
 //= require rails_bootstrap_forms
 //= require devise_bootstrap_views
