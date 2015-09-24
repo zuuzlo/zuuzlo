@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.0'
-gem 'bootstrap-sass', '~> 3.3.1'
-gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'autoprefixer-rails', '~> 5.2.1'
 gem 'bootstrap_form', "~> 2.0.1"
 gem 'jquery-rails'
 gem 'turbolinks'
