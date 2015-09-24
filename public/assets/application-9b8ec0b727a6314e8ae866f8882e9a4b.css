@@ -366,8 +366,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/fonts/../fonts/glyphicons-halflings-regular.eot");
-  src: url("/fonts/../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/../fonts/glyphicons-halflings-regular.woff") format("woff"), url("/fonts/../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/fonts/../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("/assets/glyphicons-halflings-regular.eot");
+  src: url("/assets/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/assets/glyphicons-halflings-regular.woff") format("woff"), url("/assets/glyphicons-halflings-regular.ttf") format("truetype"), url("/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 /* line 21, /usr/local/rvm/gems/ruby-2.0.0-p195/gems/bootstrap-sass-3.3.1.0/assets/stylesheets/bootstrap/_glyphicons.scss */
