@@ -38,6 +38,7 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 
 gem 'mailgun_rails'
+gem 'commission_junction'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

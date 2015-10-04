@@ -71,5 +71,6 @@ RSpec.configure do |config|
 
   config.before(:each) do
     stub_request(:any, /api.pepperjamnetwork.com/ ).to_rack( FakePepperjamApi )
+    stub_request(:any, /api.cj.com/).to_rack( FakeCjApi )
   end
 end
