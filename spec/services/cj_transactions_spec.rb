@@ -96,11 +96,86 @@ describe CjTransactions do
   end
 
   describe "cj_update_coupons" do
+    
+    (1..32).each do |i|
+      let!("category#{i}".to_s) { Fabricate(:category, ls_id: i) }
+    end
+
+    (1..31).each do |i|
+      let!("type#{i}".to_s) { Fabricate(:ctype, ls_id: i) }
+    end
+    
     context "id is not existing coupon & has store" do
-      it "creates new coupons"
-      it "adds enddate if it does not exist"
-      it "adds coupon to categories"
-      it "adds coupon to ctypes"
+      stores = [1845109, 3811852, 2458053, 4018060]
+      stores.each_with_index do | store, i |
+        let!("store#{i}".to_s) { Fabricate(:store, id_of_store: store , active_commission: true ) }
+      end
+
+      before do
+        CjTransactions.cj_update_coupons
+      end
+      
+      it "creates new coupons and gets multiple pages" do
+        expect(Coupon.count).to eq(15)
+      end
+
+      it "creates a start date if it doesn't have one" do
+        expect(Coupon.first.start_date.strftime("%m/%d/%Y")).to eq(Time.now.strftime("%m/%d/%Y"))
+      end
+
+      it "coupon start date if it has one" do
+        expect(Coupon.last.start_date).to eq("Sun, 04 Oct 2015 19:14:00 CDT -05:00")
+      end
+
+      it "adds end date if it does not exist" do
+        t = Time.now + 3.years
+        expect(Coupon.first.end_date.strftime("%m/%d/%Y")).to eq(t.strftime("%m/%d/%Y"))
+      end
+
+      it "coupon end date if it has one" do
+        expect(Coupon.last.end_date).to eq("Mon, 19 Oct 2015 08:59:00 CDT -05:00")
+      end
+
+      it "adds coupon to categories" do
+        expect(Coupon.last.categories).to eq([category6])
+      end
+
+      it "adds coupon to ctypes" do
+        expect(Coupon.first.ctypes).to eq([type11])
+      end
+    end
+
+    context "doesn't add coupon if it exists" do
+      stores = [1845109, 3811852, 2458053, 4018060]
+      stores.each_with_index do | store, i |
+        let!("store#{i}".to_s) { Fabricate(:store, id_of_store: store , active_commission: true ) }
+      end
+      
+      let!(:coupon1) { Fabricate(:coupon, id_of_coupon: 11430366, coupon_source_id: 3 ) }
+      
+      before do
+        CjTransactions.cj_update_coupons
+      end
+
+      it "coupon one is not from test list" do
+        expect(Coupon.first).to eq(coupon1)
+      end
+    end
+
+    context "no store for coupon" do
+      stores = [3811852, 2458053, 4018060]
+      #1845109
+      stores.each_with_index do | store, i |
+        let!("store#{i}".to_s) { Fabricate(:store, id_of_store: store , active_commission: true ) }
+      end
+
+      before do
+        CjTransactions.cj_update_coupons
+      end
+
+      it "tries to loads store before saving coupon" do
+        expect(Store.find(Coupon.find(3).store_id).id_of_store).to eq(1845109)
+      end
     end
   end
 end

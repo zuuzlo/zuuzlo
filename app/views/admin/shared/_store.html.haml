@@ -6,11 +6,11 @@
     %td
       = store.id_of_store
     %td
-      = store.description
+      = image_tag("#{store.store_img}", size: "120x60")
     %td
       = store.home_page_url
     %td
-      = image_tag("#{store.store_img}", size: "40x40")
+      
     %td
       = store.commission
     %td

@@ -87,6 +87,20 @@ class Admin::CouponsController < AdminController
     redirect_to admin_coupons_path
   end
 
+  def get_cj_coupons
+    count_start = Coupon.count
+    CjTransactions.cj_update_coupons
+    count_finish = Coupon.count
+    
+    if count_finish > count_start
+      flash[:success] = "CJ Coupons are updated, you imported #{count_finish - count_start} coupons."
+    else
+      flash[:danger] = "No new coupons were imported"
+    end
+
+    redirect_to admin_coupons_path
+  end
+
   def delete_coupons
     delete_coupons = []
     Coupon.all.each do | coupon |

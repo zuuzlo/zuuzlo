@@ -6,6 +6,8 @@
   .s3.l3
     = button_to "Add New PJ Coupons", { action: "get_pj_coupons" }, method: :get, class: "btn btn-success"
   .s3.l3
+    = button_to "Add New CJ Coupons", { action: "get_cj_coupons" }, method: :get, class: "btn btn-success"
+  .s3.l3
     = button_to "Delete Old Coupons", { action: "delete_coupons" }, method: :get, class: "btn btn-danger"
 %h1
   = @coupon_count
